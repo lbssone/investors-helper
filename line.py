@@ -59,17 +59,17 @@ def handle_message(event):
                             PostbackTemplateAction(
                                 label='股票',
                                 text='股票',
-                                data='stock'
+                                data='股票'
                             ),
                             PostbackTemplateAction(
                                 label='基金',
                                 text='基金',
-                                data='fund'
+                                data='基金'
                             ),
                             PostbackTemplateAction(
                                 label='外匯',
                                 text='外匯',
-                                data='foreign'
+                                data='外匯'
                             ),
                             # MessageTemplateAction(
                             #     label='message1',
