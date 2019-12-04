@@ -40,13 +40,13 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    profile = line_bot_api.get_profile(event.source.user_id)
-    user_name = profile.display_name
-    user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
-
     hi_list = ['hi', 'hello', '嗨', '你好', '哈囉', '你好嗎', '您好', '嘿', '嗨你好']
     bye_list = ['掰掰', '掰', '拜', '拜拜', '再見', '再會', '掰餔', 'bye', 'bye bye', 'good bye']
     remove_list = [' ', '~']
+
+    profile = line_bot_api.get_profile(event.source.user_id)
+    user_name = profile.display_name
+    user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
     
 
     if user_input in hi_list:
