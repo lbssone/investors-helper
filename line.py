@@ -109,8 +109,11 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     user_id = event.source.user_id
     print('content: ' + event.message.text)
-    print(event.message.postback.data)
-    
+
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    print(event.postback.data)
+
 
 
 #貼圖處理
