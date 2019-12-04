@@ -113,7 +113,7 @@ def handle_message(event):
 @handler.add(PostbackEvent)
 def handle_postback(event):
     postback = event.postback.data
-    if postback.data == 'stock':
+    if postback == 'stock':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='股票~~~'))
 
 
