@@ -42,13 +42,7 @@ def callback():
 def handle_message(event):
     hi_list = ['hi', 'hello', '嗨', '你好', '哈囉', '你好嗎', '您好', '嘿', '嗨你好']
     bye_list = ['掰掰', '掰', '拜', '拜拜', '再見', '再會', '掰餔', 'bye', 'bye bye', 'good bye']
-    friendly_list = ['你好友善', '妳好友善', '你真友善', '妳真友善', '你人真好', '妳人真好']
-    curse_words = ['幹你娘', '馬的', '$#@%$%#$%', '靠北', 'shit!', '幹', '閉嘴', '吵死了', '加油好嗎', '我愛你', '你愛我嗎', '寶貝', '汪汪汪', 'I love you', '你在幹嘛']
     remove_list = [' ', '~']
-    urls = ['https://imgur.dcard.tw/bPYuNQm.jpg',
-        'https://agirls.aotter.net/media/9f0b48ba-f534-44c4-a109-07380d4e07dd.PNG',
-        'https://s2.imgs.cc/img/9KR8UQf.jpg', 'https://pbs.twimg.com/media/DJ5KCtiUQAE6juW.jpg', 
-        'https://images.plurk.com/1aDwxN9ei4g201BFznRa.jpg']
     
     user_input = event.message.text.lower()
     user_input = user_input.translate(str.maketrans('', '', ''.join(remove_list)))
@@ -63,18 +57,28 @@ def handle_message(event):
                         text='description1',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
+                                label='股票',
+                                text='股票',
+                                data='stock'
                             ),
-                            MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
+                            PostbackTemplateAction(
+                                label='基金',
+                                text='基金',
+                                data='fund'
                             ),
-                            URITemplateAction(
-                                label='uri1',
-                                uri='http://example.com/1'
-                            )
+                            PostbackTemplateAction(
+                                label='外匯',
+                                text='外匯',
+                                data='foreign'
+                            ),
+                            # MessageTemplateAction(
+                            #     label='message1',
+                            #     text='message text1'
+                            # ),
+                            # URITemplateAction(
+                            #     label='uri1',
+                            #     uri='http://example.com/1'
+                            # )
                         ]
                     ),
                     CarouselColumn(
@@ -105,6 +109,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     user_id = event.source.user_id
     print('content: ' + event.message.text)
+    print(Postback.)
     
 
 
