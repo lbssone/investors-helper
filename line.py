@@ -117,7 +117,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
-    elif text == 'profile':
+    elif user_input == 'profile':
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
             line_bot_api.reply_message(
