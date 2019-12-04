@@ -13,9 +13,8 @@ from linebot.models import *
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('bQQ87wk2wswTziVTKU4Ah4DEjfO0bSXYs5qxuSyr7eEdgt96Zb7BMW9gCziE3z697EU/MTw/arjEAvDAxtfWY/hy7owE3mnofBt8HnpOXjne3vbyHWsHOI0sLBzHS2iUgteH5uhVB7RzJAOg4IRsZQdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('62a2916dcdd06b85e242fdb11bb36fef')
-# to = 'U86847ce3e861fa7b94de62652217c96d'
+line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnDVZwwMPOzasdfsNPiGxCymwoNeQSTtx4HooAlKzvMftmHiUEUkbXAb3v1nYSjMGROkM3kNJqmtNA1nqAY5NgjVcXyiZJxUN2cAdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 
 @app.route('/')
 def index():
@@ -36,23 +35,6 @@ def callback():
         abort(400)
     return 'OK'
 
-user_set = set()
-annie = 'U135416e85fe037e9a91158641a56afb3'
-tweety = 'U5be392c04c87ee517f9e2f4ebd505b92'
-me = 'U86847ce3e861fa7b94de62652217c96d'
-jing = 'U8a186af9a2542b30b73b2eca6c598ce1'
-wanju = 'U1f1d2e95bfe8b0eaff4683643afd8474'
-chiayu = 'U77419fa36b6e76e019ecb6b013807adf'
-andrey = 'U4f6296cf501988656bd33ee4ceaba7fa'
-green = 'U79b484407dc572486489c9715d37ef44'
-# try:
-#     line_bot_api.push_message(tweety, TextSendMessage(text=''))
-# except LineBotApiError as e:
-#     raise e
-try:
-    line_bot_api.multicast([andrey, me], TextSendMessage(text='掰掰~~'))
-except LineBotApiError as e:
-    raise e
 
 
 # 處理訊息
