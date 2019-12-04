@@ -119,11 +119,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     elif user_input == 'profile':
         profile = line_bot_api.get_profile(event.source.user_id)
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='yay'),
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='yay'))
                 #     TextSendMessage(text='Status message: ' + profile.status_message)
                 # ]
-            )
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Bot can't use profile API without user ID"))
     user_id = event.source.user_id
