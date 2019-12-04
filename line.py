@@ -71,6 +71,16 @@ def handle_message(event):
                                 text='外匯',
                                 data='外匯'
                             ),
+                            PostbackTemplateAction(
+                                label='保險',
+                                text='保險',
+                                data='保險'
+                            ),
+                            PostbackTemplateAction(
+                                label='定存',
+                                text='定存',
+                                data='定存'
+                            ),
                             # MessageTemplateAction(
                             #     label='message1',
                             #     text='message text1'
@@ -107,6 +117,19 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
+    elif text == 'profile':
+        if isinstance(event.source, SourceUser):
+            profile = line_bot_api.get_profile(event.source.user_id)
+            line_bot_api.reply_message(
+                event.reply_token, [
+                    TextSendMessage(text='Display name: ' + profile.display_name),
+                    TextSendMessage(text='Status message: ' + profile.status_message)
+                ]
+            )
+        else:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text="Bot can't use profile API without user ID"))
     user_id = event.source.user_id
     print('content: ' + event.message.text)
 
