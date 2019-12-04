@@ -53,27 +53,55 @@ def handle_message(event):
     user_input = event.message.text.lower()
     user_input = user_input.translate(str.maketrans('', '', ''.join(remove_list)))
     if user_input in hi_list:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你好~~歡迎問我任何問題！"))
-    elif user_input in bye_list:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="再會~~有緣再相會"))
-    elif user_input in friendly_list:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝，你人真好！"))
-    elif user_input[0] == '喵' and user_input.count(user_input[0]) == len(user_input):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="喵的"))
-    elif user_input[0] == '汪' and user_input.count(user_input[0]) == len(user_input):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="喵"))
-    elif user_input == '幹' or user_input == '乾' or user_input == '幹你娘' or user_input == '操' or user_input == '干':
-        url_index = random.randint(0, len(urls) - 1)
-        url = urls[url_index]
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=url, preview_image_url=url))
-    elif user_input == '謝謝':
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="不客氣~~"))
-    else:
-        i = random.randint(0, len(curse_words) - 1)
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=curse_words[i]))
+        Carousel_template = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='message1',
+                                text='message text1'
+                            ),
+                            URITemplateAction(
+                                label='uri1',
+                                uri='http://example.com/1'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='',
+                        title='this is menu2',
+                        text='description2',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URITemplateAction(
+                                label='連結2',
+                                uri='http://example.com/2'
+                            )
+                        ]
+                    )
+                ]
+            )
+        )
+    line_bot_api.reply_message(event.reply_token,Carousel_template)
     user_id = event.source.user_id
-    user_set.add(user_id)
-    print(user_set)
     print('content: ' + event.message.text)
     
 
