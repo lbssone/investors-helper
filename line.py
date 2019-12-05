@@ -119,7 +119,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='nono'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     elif user_input == 'flex':
         bubble = BubbleContainer(
             direction='ltr',
