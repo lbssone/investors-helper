@@ -74,16 +74,16 @@ def handle_message(event):
                                 text='外匯',
                                 data='外匯'
                             ),
-                            PostbackTemplateAction(
-                                label='保險',
-                                text='保險',
-                                data='保險'
-                            ),
-                            PostbackTemplateAction(
-                                label='定存',
-                                text='定存',
-                                data='定存'
-                            ),
+                            # PostbackTemplateAction(
+                            #     label='保險',
+                            #     text='保險',
+                            #     data='保險'
+                            # ),
+                            # PostbackTemplateAction(
+                            #     label='定存',
+                            #     text='定存',
+                            #     data='定存'
+                            # ),
                             # MessageTemplateAction(
                             #     label='message1',
                             #     text='message text1'
