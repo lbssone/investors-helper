@@ -231,7 +231,7 @@ def handle_message(event):
             text='請選擇欲查看之資訊',
             quick_reply=QuickReply(
                 items=[
-                    QuickReplyButton(action=MessageAction(label="股票", text="股票", imageurl='https://image.flaticon.com/icons/svg/1743/1743083.svg')),
+                    QuickReplyButton(action=MessageAction(label="股票", text="股票", imageUrl='https://image.flaticon.com/icons/svg/1743/1743083.svg')),
                     QuickReplyButton(action=MessageAction(label="基金", text="基金")),
                     QuickReplyButton(action=MessageAction(label="外匯", text="外匯"))
                 ]
