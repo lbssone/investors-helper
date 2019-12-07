@@ -59,22 +59,22 @@ def handle_message(event):
                 text='請選擇欲查看之帳務',
                 actions=[
                     PostbackAction(
-                        label='postback',
+                        label='股票',
                         display_text='股票',
                         data='股票'
                     ),
                     PostbackAction(
-                        label='postback',
+                        label='基金',
                         display_text='基金',
                         data='基金'
                     ),
                     PostbackAction(
-                        label='postback',
+                        label='外匯',
                         display_text='外匯',
                         data='外匯'
                     ),
                      PostbackAction(
-                        label='postback',
+                        label='定存',
                         display_text='定存',
                         data='定存'
                     ),
