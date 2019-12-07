@@ -278,7 +278,7 @@ def handle_message(event):
             },
             "styles": {
                 "footer": {
-                "separator": true
+                "separator": "true"
                 }
             }
         }
