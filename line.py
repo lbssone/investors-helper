@@ -61,22 +61,22 @@ def handle_message(event):
                     PostbackAction(
                         label='股票',
                         display_text='股票',
-                        data='股票'
+                        data='股票:帳務'
                     ),
                     PostbackAction(
                         label='基金',
                         display_text='基金',
-                        data='基金'
+                        data='基金:帳務'
                     ),
                     PostbackAction(
                         label='外匯',
                         display_text='外匯',
-                        data='外匯'
+                        data='外匯:帳務'
                     ),
                      PostbackAction(
                         label='定存',
                         display_text='定存',
-                        data='定存'
+                        data='定存:帳務'
                     ),
                 ]
             )
@@ -142,7 +142,44 @@ def handle_message(event):
         # line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
-    elif user_input == '股票' or user_input == '基金' or user_input == '外匯':
+    elif user_input == '投資資訊':
+        investment_info_message = TextSendMessage(
+            text='請選擇欲查看之資訊',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
+                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
+                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, investment_info_message)
+    elif user_input == 'confirm':
+        Confirm_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ConfirmTemplate(
+                title='這是ConfirmTemplate',
+                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
+                actions=[                              
+                    PostbackTemplateAction(
+                        label='Yes',
+                        text='Yes',
+                        data='yes'
+                    ),
+                    MessageTemplateAction(
+                        label='No',
+                        text='No'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, Confirm_template)
+    print('content: ' + event.message.text)
+
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    postback = event.postback.data
+    if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
@@ -243,49 +280,7 @@ def handle_message(event):
             ),
         )
         message = FlexSendMessage(alt_text="hello", contents=bubble)
-        line_bot_api.reply_message(
-            event.reply_token,
-            message
-        )
-    elif user_input == '投資資訊':
-        investment_info_message = TextSendMessage(
-            text='請選擇欲查看之資訊',
-            quick_reply=QuickReply(
-                items=[
-                    QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
-                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
-                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, investment_info_message)
-    elif user_input == 'confirm':
-        Confirm_template = TemplateSendMessage(
-            alt_text='目錄 template',
-            template=ConfirmTemplate(
-                title='這是ConfirmTemplate',
-                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
-                actions=[                              
-                    PostbackTemplateAction(
-                        label='Yes',
-                        text='Yes',
-                        data='yes'
-                    ),
-                    MessageTemplateAction(
-                        label='No',
-                        text='No'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, Confirm_template)
-    print('content: ' + event.message.text)
-
-@handler.add(PostbackEvent)
-def handle_postback(event):
-    postback = event.postback.data
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=postback+'~~~'))
-
+        line_bot_api.reply_message(event.reply_token, message)
 
 
 import os
