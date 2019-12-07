@@ -51,74 +51,95 @@ def handle_message(event):
     
 
     if user_input == '查看帳務資訊':
-        Carousel_template = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                        title='this is menu1',
-                        text='description1',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='股票',
-                                text='股票',
-                                data='股票'
-                            ),
-                            PostbackTemplateAction(
-                                label='基金',
-                                text='基金',
-                                data='基金'
-                            ),
-                            PostbackTemplateAction(
-                                label='外匯',
-                                text='外匯',
-                                data='外匯'
-                            ),
-                            # PostbackTemplateAction(
-                            #     label='保險',
-                            #     text='保險',
-                            #     data='保險'
-                            # ),
-                            # PostbackTemplateAction(
-                            #     label='定存',
-                            #     text='定存',
-                            #     data='定存'
-                            # ),
-                            # MessageTemplateAction(
-                            #     label='message1',
-                            #     text='message text1'
-                            # ),
-                            # URITemplateAction(
-                            #     label='uri1',
-                            #     uri='http://example.com/1'
-                            # )
-                        ]
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+                title='{}的帳務資訊列表'.format(user_name),
+                text='請選擇欲查看之帳務',
+                actions=[
+                    PostbackAction(
+                        label='postback',
+                        display_text='股票',
+                        data='股票'
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URITemplateAction(
-                                label='連結2',
-                                uri='http://example.com/2'
-                            )
-                        ]
-                    )
+                    PostbackAction(
+                        label='postback',
+                        display_text='基金',
+                        data='基金'
+                    ),
+                    PostbackAction(
+                        label='postback',
+                        display_text='外匯',
+                        data='外匯'
+                    ),
+                     PostbackAction(
+                        label='postback',
+                        display_text='定存',
+                        data='定存'
+                    ),
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,Carousel_template)
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        # Carousel_template = TemplateSendMessage(
+        #     alt_text='Carousel template',
+        #     template=CarouselTemplate(
+        #         columns=[
+        #             CarouselColumn(
+        #                 thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+        #                 title='this is menu1',
+        #                 text='description1',
+        #                 actions=[
+        #                     PostbackTemplateAction(
+        #                         label='股票',
+        #                         text='股票',
+        #                         data='股票'
+        #                     ),
+        #                     PostbackTemplateAction(
+        #                         label='基金',
+        #                         text='基金',
+        #                         data='基金'
+        #                     ),
+        #                     PostbackTemplateAction(
+        #                         label='外匯',
+        #                         text='外匯',
+        #                         data='外匯'
+        #                     ),
+        #                     # MessageTemplateAction(
+        #                     #     label='message1',
+        #                     #     text='message text1'
+        #                     # ),
+        #                     # URITemplateAction(
+        #                     #     label='uri1',
+        #                     #     uri='http://example.com/1'
+        #                     # )
+        #                 ]
+        #             ),
+        #             CarouselColumn(
+        #                 thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+        #                 title='this is menu2',
+        #                 text='description2',
+        #                 actions=[
+        #                     PostbackTemplateAction(
+        #                         label='postback2',
+        #                         text='postback text2',
+        #                         data='action=buy&itemid=2'
+        #                     ),
+        #                     MessageTemplateAction(
+        #                         label='message2',
+        #                         text='message text2'
+        #                     ),
+        #                     URITemplateAction(
+        #                         label='連結2',
+        #                         uri='http://example.com/2'
+        #                     )
+        #                 ]
+        #             )
+        #         ]
+        #     )
+        # )
+        # line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     elif user_input == '股票' or user_input == '基金' or user_input == '外匯':
