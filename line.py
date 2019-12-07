@@ -232,22 +232,22 @@ def handle_message(event):
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
-                {
-                    "type": "text",
-                    "text": "Are you sure?",
-                    "margin": "md"
-                },
-                {
-                    "type": "spacer"
-                }
+                    {
+                        "type": "text",
+                        "text": "Are you sure?",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "spacer"
+                    }
                 ],
                 "action": {
-                "type": "uri",
-                "label": "View detail",
-                "uri": "http://linecorp.com/",
-                "altUri": {
-                    "desktop": "http://example.com/page/123"
-                }
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "http://linecorp.com/",
+                    "altUri": {
+                        "desktop": "http://example.com/page/123"
+                    }
                 }
             },
             "footer": {
@@ -255,37 +255,34 @@ def handle_message(event):
                 "layout": "horizontal",
                 "spacing": "sm",
                 "contents": [
-                {
-                    "type": "button",
-                    "action": {
-                    "type": "message",
-                    "label": "Yes",
-                    "text": "yes"
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "message",
+                            "label": "Yes",
+                            "text": "yes"
+                        },
+                        "height": "sm"
                     },
-                    "height": "sm"
-                },
-                {
-                    "type": "button",
-                    "action": {
-                    "type": "message",
-                    "label": "No",
-                    "text": "no"
-                    },
-                    "height": "sm"
-                }
+                    {
+                        "type": "button",
+                        "action": {
+                        "type": "message",
+                        "label": "No",
+                        "text": "no"
+                        },
+                        "height": "sm"
+                    }
                 ],
                 "flex": 0
             },
             "styles": {
                 "footer": {
-                "separator": "true"
+                    "separator": "true"
                 }
             }
         }
-        line_bot_api.reply_message(
-            event.reply_token,
-            message
-        )
+        line_bot_api.reply_message(event.reply_token, message)
     print('content: ' + event.message.text)
 
 @handler.add(PostbackEvent)
