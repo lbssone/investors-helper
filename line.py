@@ -122,10 +122,10 @@ def handle_message(event):
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
     elif user_input in hi_list:
-        message = {
+        message = TextMessage({
             "type": "text",
             "text": "這裡是要回應的文字"
-        }
+        })
         line_bot_api.reply_message(event.reply_token, message)
     elif user_input == '股票' or user_input == '基金' or user_input == '外匯':
         bubble = BubbleContainer(
