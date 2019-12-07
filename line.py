@@ -121,11 +121,11 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
-    elif user_input == 'flex':
+    elif user_input == '股票' or user_input == '基金' or user_input == '外匯':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='https://example.com/cafe.jpg',
+                url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
