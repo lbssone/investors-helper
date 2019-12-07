@@ -193,7 +193,7 @@ def handle_postback(event):
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='您的{}資產總覽'.format(user_input), weight='bold', size='xl'),
+                    TextComponent(text='您的{}資產總覽'.format(postback[:2]), weight='bold', size='xl'),
                     # review
                     # BoxComponent(
                     #     layout='baseline',
