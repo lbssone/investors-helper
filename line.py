@@ -227,7 +227,7 @@ def handle_message(event):
             message
         )
     elif user_input == '投資資訊':
-        investment_info = TextSendMessage(
+        investment_info_message = TextSendMessage(
             text='請選擇欲查看之資訊',
             quick_reply=QuickReply(
                 items=[
@@ -237,6 +237,7 @@ def handle_message(event):
                 ]
             )
         )
+        line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif user_input == 'confirm':
         Confirm_template = TemplateSendMessage(
             alt_text='目錄 template',
