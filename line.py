@@ -1,5 +1,6 @@
 import random
 import string
+import json
 from flask import Flask, request, abort
 
 from linebot import (
@@ -226,7 +227,7 @@ def handle_message(event):
             message
         )
     elif user_input == 'confirm':
-        message = {
+        confirm = {
             "type": "bubble",
             "body": {
                 "type": "box",
@@ -282,6 +283,7 @@ def handle_message(event):
                 }
             }
         }
+        message = FlexSendMessage(alt_text="hello", contents=confirm)
         line_bot_api.reply_message(event.reply_token, message)
     print('content: ' + event.message.text)
 
