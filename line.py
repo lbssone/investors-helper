@@ -232,8 +232,8 @@ def handle_message(event):
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
-                    QuickReplyButton(action=MessageAction(label="基金", text="基金")),
-                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"))
+                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
+                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
                 ]
             )
         )
