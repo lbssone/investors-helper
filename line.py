@@ -228,7 +228,7 @@ def handle_message(event):
         )
     elif user_input == '投資資訊':
         investment_info = TextSendMessage(
-            text='請選擇欲查看之資訊'
+            text='請選擇欲查看之資訊',
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(action=MessageAction(label="股票", text="股票", imageurl='https://image.flaticon.com/icons/svg/1743/1743083.svg'))
