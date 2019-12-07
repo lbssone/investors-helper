@@ -234,13 +234,13 @@ def handle_message(event):
                 text='這就是ConfirmTemplate,用於兩種按鈕選擇',
                 actions=[                              
                     PostbackTemplateAction(
-                        label='Y',
-                        text='Y',
-                        data='action=buy&itemid=1'
+                        label='Yes',
+                        text='Yes',
+                        data='yes'
                     ),
                     MessageTemplateAction(
-                        label='N',
-                        text='N'
+                        label='No',
+                        text='No'
                     )
                 ]
             )
