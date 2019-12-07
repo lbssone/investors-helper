@@ -225,6 +225,67 @@ def handle_message(event):
             event.reply_token,
             message
         )
+    elif user_input == 'confirm':
+        message = {
+            "type": "bubble",
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                {
+                    "type": "text",
+                    "text": "Are you sure?",
+                    "margin": "md"
+                },
+                {
+                    "type": "spacer"
+                }
+                ],
+                "action": {
+                "type": "uri",
+                "label": "View detail",
+                "uri": "http://linecorp.com/",
+                "altUri": {
+                    "desktop": "http://example.com/page/123"
+                }
+                }
+            },
+            "footer": {
+                "type": "box",
+                "layout": "horizontal",
+                "spacing": "sm",
+                "contents": [
+                {
+                    "type": "button",
+                    "action": {
+                    "type": "message",
+                    "label": "Yes",
+                    "text": "yes"
+                    },
+                    "height": "sm"
+                },
+                {
+                    "type": "button",
+                    "action": {
+                    "type": "message",
+                    "label": "No",
+                    "text": "no"
+                    },
+                    "height": "sm"
+                }
+                ],
+                "flex": 0
+            },
+            "styles": {
+                "footer": {
+                "separator": true
+                }
+            }
+        }
+        line_bot_api.reply_message(
+            event.reply_token,
+            message
+        )
     print('content: ' + event.message.text)
 
 @handler.add(PostbackEvent)
@@ -232,36 +293,6 @@ def handle_postback(event):
     postback = event.postback.data
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=postback+'~~~'))
 
-
-
-#貼圖處理
-@handler.add(MessageEvent, message=StickerMessage)
-def handle_sticker_message(event):
-    print("package_id:", event.message.package_id)
-    print("sticker_id:", event.message.sticker_id)
-     # ref. https://developers.line.me/media/messaging-api/sticker_list.pdf
-    sticker_ids = [
-        52002734, 52002735, 52002736, 52002737, 52002738, 52002739, 52002740, 52002741, 52002742, 52002743,
-        52002744, 52002745, 52002746, 52002747, 52002748, 52002749, 52002750, 52002751, 52002752, 52002753,
-        52002754, 52002755, 52002756, 52002757, 52002758, 52002759, 52002760, 52002761, 52002762, 52002763,
-        52002764, 52002765, 52002766, 52002767, 52002768, 52002769, 52002770, 5200277, 52002778, 52002779
-    ]
-
-    # package_ids = [11537]
-    # package_index = random.randint(0, len(package_ids) - 1)
-    sticker_index = random.randint(0, len(sticker_ids) - 1)
-    # package_id = str(package_ids[package_index])
-    sticker_id = str(sticker_ids[sticker_index])
-    sticker_message = StickerSendMessage( package_id='11537', sticker_id=sticker_id)
-    line_bot_api.reply_message(event.reply_token,sticker_message)
-
-
-@handler.add(MessageEvent, message=ImageMessage)
-def handle_image_message(event):
-
-    url = 'https://i2-prod.bristolpost.co.uk/incoming/article1823830.ece/ALTERNATES/s615/1_The-Feline-World-Gathers-For-The-Supreme-Cat-Show-2017.jpg'
-    # url = 'https://agirls.aotter.net/media/9f0b48ba-f534-44c4-a109-07380d4e07dd.PNG'
-    line_bot_api.reply_message(event.reply_token, ImageSendMessage(original_content_url=url, preview_image_url=url))
 
 
 import os
