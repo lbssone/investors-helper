@@ -50,7 +50,7 @@ def handle_message(event):
     user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
     
 
-    if user_input in hi_list:
+    if user_input == '查看帳務資訊':
         Carousel_template = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
