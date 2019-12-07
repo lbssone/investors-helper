@@ -121,12 +121,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,Carousel_template)
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
-    elif user_input in hi_list:
-        message = TextMessage({
-            "type": "text",
-            "text": "這裡是要回應的文字"
-        })
-        line_bot_api.reply_message(event.reply_token, message)
     elif user_input == '股票' or user_input == '基金' or user_input == '外匯':
         bubble = BubbleContainer(
             direction='ltr',
@@ -143,19 +137,19 @@ def handle_message(event):
                     # title
                     TextComponent(text='您的{}資產總覽'.format(user_input), weight='bold', size='xl'),
                     # review
-                    BoxComponent(
-                        layout='baseline',
-                        margin='md',
-                        contents=[
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                            TextComponent(text='4.0', size='sm', color='#999999', margin='md',
-                                          flex=0)
-                        ]
-                    ),
+                    # BoxComponent(
+                    #     layout='baseline',
+                    #     margin='md',
+                    #     contents=[
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+                    #         TextComponent(text='4.0', size='sm', color='#999999', margin='md',
+                    #                       flex=0)
+                    #     ]
+                    # ),
                     # info
                     BoxComponent(
                         layout='vertical',
@@ -231,6 +225,17 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             message
+        )
+    elif user_input == '投資資訊':
+        investment_info = TextSendMessage(
+            text='請選擇欲查看之資訊'
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(action=MessageAction(label="股票", text="股票", imageurl='https://image.flaticon.com/icons/svg/1743/1743083.svg'))
+                    QuickReplyButton(action=MessageAction(label="基金", text="基金"))
+                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"))
+                ]
+            )
         )
     elif user_input == 'confirm':
         Confirm_template = TemplateSendMessage(
