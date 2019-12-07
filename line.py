@@ -227,64 +227,25 @@ def handle_message(event):
             message
         )
     elif user_input == 'confirm':
-        confirm = {
-            "type": "bubble",
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": "Are you sure?",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "spacer"
-                    }
-                ],
-                "action": {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "http://linecorp.com/",
-                    "altUri": {
-                        "desktop": "http://example.com/page/123"
-                    }
-                }
-            },
-            "footer": {
-                "type": "box",
-                "layout": "horizontal",
-                "spacing": "sm",
-                "contents": [
-                    {
-                        "type": "button",
-                        "action": {
-                            "type": "message",
-                            "label": "Yes",
-                            "text": "yes"
-                        },
-                        "height": "sm"
-                    },
-                    {
-                        "type": "button",
-                        "action": {
-                        "type": "message",
-                        "label": "No",
-                        "text": "no"
-                        },
-                        "height": "sm"
-                    }
-                ],
-                "flex": 0
-            },
-            "styles": {
-                "footer": {
-                    "separator": "true"
-                }
-            }
-        }
-        message = FlexSendMessage(alt_text="hello", contents=confirm)
-        line_bot_api.reply_message(event.reply_token, message)
+        Confirm_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ConfirmTemplate(
+                title='這是ConfirmTemplate',
+                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
+                actions=[                              
+                    PostbackTemplateAction(
+                        label='Y',
+                        text='Y',
+                        data='action=buy&itemid=1'
+                    ),
+                    MessageTemplateAction(
+                        label='N',
+                        text='N'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, Confirm_template)
     print('content: ' + event.message.text)
 
 @handler.add(PostbackEvent)
