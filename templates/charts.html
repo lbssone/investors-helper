@@ -8,7 +8,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
   <script src="https://code.highcharts.com/highcharts.src.js"></script>
   <style>
-    .container {
+    #container {
         width: 60%;
     }
   </style>
@@ -17,7 +17,7 @@
   <h1>Hi there.</h1>
   <div id='container'></div>
   <script>
-    Highcharts.chart('container', {{ chart }});
+    Highcharts.chart('container', {{ chart|safe }});
   </script>
 </body>
 </html>
