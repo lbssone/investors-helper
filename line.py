@@ -314,26 +314,6 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
-    elif user_input == 'confirm':
-        Confirm_template = TemplateSendMessage(
-            alt_text='目錄 template',
-            template=ConfirmTemplate(
-                title='這是ConfirmTemplate',
-                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
-                actions=[                              
-                    PostbackTemplateAction(
-                        label='Yes',
-                        text='Yes',
-                        data='yes'
-                    ),
-                    MessageTemplateAction(
-                        label='No',
-                        text='No'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, Confirm_template)
     elif user_input == '設定':
         Carousel_template = TemplateSendMessage(
             alt_text='Carousel template',
@@ -666,6 +646,26 @@ def handle_postback(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    elif postback == '資產變動提醒' or postback == '到價通知' or postback == '到期日通知':
+        Confirm_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ConfirmTemplate(
+                title='這是ConfirmTemplate',
+                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
+                actions=[                              
+                    PostbackTemplateAction(
+                        label='Yes',
+                        text='Yes',
+                        data='yes'
+                    ),
+                    MessageTemplateAction(
+                        label='No',
+                        text='No'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, Confirm_template)
         # bubble = BubbleContainer(
         #     direction='ltr',
         #     hero=ImageComponent(
