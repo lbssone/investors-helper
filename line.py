@@ -277,6 +277,7 @@ def handle_message(event):
                             "type": "button",
                             "style": "primary",
                             "color": "#f2aa5c",
+                            "height": "sm",
                             "action": {
                                 "type": "uri",
                                 "label": "查看圖表",
@@ -286,6 +287,7 @@ def handle_message(event):
                         {
                             "type": "button",
                             "style": "secondary",
+                            "height": "sm",
                             "action": {
                                 "type": "postback",
                                 "label": "投資帳務列表",
