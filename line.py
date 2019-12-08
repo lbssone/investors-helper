@@ -626,7 +626,7 @@ def handle_postback(event):
                             "action": {
                                 "type": "uri",
                                 "label": "查看圖表",
-                                "uri": "https://investors-helper.herokuapp.com/charts"
+                                "uri": "https://investors-helper.herokuapp.com/chart2"
                             }
                         }
                     ]
@@ -772,6 +772,10 @@ def handle_postback(event):
 @app.route("/charts", methods=['GET'])
 def show_charts():
     return render_template('charts.html')
+
+@app.route("/chart2", methods=['GET'])
+def show_charts():
+    return render_template('chart2.html')
 
 
 if __name__ == "__main__":
