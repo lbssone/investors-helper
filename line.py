@@ -774,7 +774,7 @@ def show_charts():
     return render_template('charts.html')
 
 @app.route("/chart2", methods=['GET'])
-def show_charts():
+def show_chart2():
     return render_template('chart2.html')
 
 
