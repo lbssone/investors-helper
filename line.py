@@ -189,7 +189,11 @@ def handle_postback(event):
             alt_text="hello",
             contents={
                 "type": "bubble",
-                "direction": "ltr",
+                "styles": {
+                    "footer": {
+                        "separator": "true"
+                    }
+                },
                 "hero": {
                     "type": "image",
                     "url": "https://example.com/cafe.jpg",
