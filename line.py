@@ -398,6 +398,7 @@ def handle_message(event):
 @handler.add(PostbackEvent)
 def handle_postback(event):
     postback = event.postback.data
+    print('postback: '+postback)
     if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
         flex_message = FlexSendMessage(
             alt_text='hello',
@@ -638,7 +639,7 @@ def handle_postback(event):
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                title='{}的帳務資訊列表'.format(user_name),
+                title='您的帳務資訊列表',
                 text='請選擇欲查看之帳務',
                 actions=[
                     PostbackAction(
