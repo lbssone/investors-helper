@@ -191,7 +191,7 @@ def handle_postback(event):
                 "type": "bubble",
                 "styles": {
                     "footer": {
-                        "separator": "true"
+                        "separator": True
                     }
                 },
                 "hero": {
