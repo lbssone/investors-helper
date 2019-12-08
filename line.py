@@ -1,7 +1,8 @@
 import random
 import string
 import json
-from flask import Flask, request, abort
+from flask import Flask, request, abort, render_template
+import os
 
 from linebot import (
     LineBotApi, WebhookHandler
@@ -264,9 +265,8 @@ def handle_postback(event):
                     SpacerComponent(size='sm'),
                     # callAction
                     ButtonComponent(
-                        style='link',
                         height='sm',
-                        action=URIAction(label='CALL', uri='tel:000000'),
+                        action=URIAction(label='查看圖表', uri='https://investors-helper.herokuapp.com/charts'),
                     ),
                     # separator
                     SeparatorComponent(),
@@ -282,8 +282,11 @@ def handle_postback(event):
         message = FlexSendMessage(alt_text="hello", contents=bubble)
         line_bot_api.reply_message(event.reply_token, message)
 
+@app.route("/charts", methods=['GET'])
+def show_charts():
+    return render_template('charts.html')
 
-import os
+
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
