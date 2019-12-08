@@ -54,177 +54,6 @@ def handle_message(event):
         reply = 'Hi ' + user_name
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
     if user_input == '查看帳務資訊':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                title='{}的帳務資訊列表'.format(user_name),
-                text='請選擇欲查看之帳務',
-                actions=[
-                    PostbackAction(
-                        label='股票',
-                        display_text='股票',
-                        data='股票:帳務'
-                    ),
-                    PostbackAction(
-                        label='基金',
-                        display_text='基金',
-                        data='基金:帳務'
-                    ),
-                    PostbackAction(
-                        label='外匯',
-                        display_text='外匯',
-                        data='外匯:帳務'
-                    ),
-                     PostbackAction(
-                        label='定存',
-                        display_text='定存',
-                        data='定存:帳務'
-                    ),
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        
-    elif user_input == 'no':
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
-    elif user_input == '投資資訊':
-        investment_info_message = TextSendMessage(
-            text='請選擇欲查看之資訊',
-            quick_reply=QuickReply(
-                items=[
-                    QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
-                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
-                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, investment_info_message)
-    elif user_input == 'confirm':
-        Confirm_template = TemplateSendMessage(
-            alt_text='目錄 template',
-            template=ConfirmTemplate(
-                title='這是ConfirmTemplate',
-                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
-                actions=[                              
-                    PostbackTemplateAction(
-                        label='Yes',
-                        text='Yes',
-                        data='yes'
-                    ),
-                    MessageTemplateAction(
-                        label='No',
-                        text='No'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, Confirm_template)
-    elif user_input == '設定':
-        Carousel_template = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
-                        title='this is menu1',
-                        text='description1',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='資產變動提醒',
-                                text='資產變動提醒',
-                                data='資產變動提醒'
-                            ),
-                            PostbackTemplateAction(
-                                label='到價通知',
-                                text='到價通知',
-                                data='到價通知'
-                            ),
-                            PostbackTemplateAction(
-                                label='到期日通知',
-                                text='到期日通知',
-                                data='到期日通知'
-                            ),
-                            # MessageTemplateAction(
-                            #     label='message1',
-                            #     text='message text1'
-                            # ),
-                            # URITemplateAction(
-                            #     label='uri1',
-                            #     uri='http://example.com/1'
-                            # )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URITemplateAction(
-                                label='連結2',
-                                uri='http://example.com/2'
-                            )
-                        ]
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token,Carousel_template)
-    print('content: ' + event.message.text)
-
-@handler.add(PostbackEvent)
-def handle_postback(event):
-    postback = event.postback.data
-    if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
-        # flex_message = FlexSendMessage(
-        #     alt_text="hello",
-        #     contents={
-        #         "type": "bubble",
-        #         "styles": {
-        #             "footer": {
-        #                 "separator": True
-        #             }
-        #         },
-        #         "hero": {
-        #             "type": "image",
-        #             "url": "https://example.com/cafe.jpg",
-        #             "size": "full",
-        #             "aspectRatio": "20:13",
-        #             "aspectMode": "cover",
-        #             "action": {
-        #             "type": "uri",
-        #             "uri": "http://example.com",
-        #             "label": "label"
-        #             }
-        #         },
-        #         "footer": {
-        #             "type": "box",
-        #             "layout": "vertical",
-        #             "spacing": "sm",
-        #             "contents": [
-        #             {
-        #                 "type": "button",
-        #                 "style": "primary",
-        #                 "color": "#f2aa5c",
-        #                 "action": {
-        #                 "type": "uri",
-        #                 "label": "Add to wish list",
-        #                 "uri": "https://linecorp.com"
-        #                 }
-        #             }
-        #             ]
-        #         }
-        #     }
-        # )
         flex_message = FlexSendMessage(
             alt_text='hello',
             contents={
@@ -247,7 +76,7 @@ def handle_postback(event):
                         },
                         {
                             "type": "text",
-                            "text": "Brown Store",
+                            "text": "您的{}資產總覽".format(postback[:2]),
                             "weight": "bold",
                             "size": "xxl",
                             "margin": "md"
@@ -450,8 +279,374 @@ def handle_postback(event):
                             "color": "#f2aa5c",
                             "action": {
                                 "type": "uri",
-                                "label": "Add to wish list",
-                                "uri": "https://linecorp.com"
+                                "label": "查看圖表",
+                                "uri": "https://investors-helper.herokuapp.com/charts"
+                            }
+                        }
+                    ]
+                }
+            }
+        )
+        line_bot_api.reply_message(event.reply_token, flex_message)
+        
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+                title='{}的帳務資訊列表'.format(user_name),
+                text='請選擇欲查看之帳務',
+                actions=[
+                    PostbackAction(
+                        label='股票',
+                        display_text='股票',
+                        data='股票:帳務'
+                    ),
+                    PostbackAction(
+                        label='基金',
+                        display_text='基金',
+                        data='基金:帳務'
+                    ),
+                    PostbackAction(
+                        label='外匯',
+                        display_text='外匯',
+                        data='外匯:帳務'
+                    ),
+                     PostbackAction(
+                        label='定存',
+                        display_text='定存',
+                        data='定存:帳務'
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+    elif user_input == 'no':
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
+    elif user_input == '投資資訊':
+        investment_info_message = TextSendMessage(
+            text='請選擇欲查看之資訊',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
+                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
+                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, investment_info_message)
+    elif user_input == 'confirm':
+        Confirm_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ConfirmTemplate(
+                title='這是ConfirmTemplate',
+                text='這就是ConfirmTemplate,用於兩種按鈕選擇',
+                actions=[                              
+                    PostbackTemplateAction(
+                        label='Yes',
+                        text='Yes',
+                        data='yes'
+                    ),
+                    MessageTemplateAction(
+                        label='No',
+                        text='No'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, Confirm_template)
+    elif user_input == '設定':
+        Carousel_template = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='資產變動提醒',
+                                text='資產變動提醒',
+                                data='資產變動提醒'
+                            ),
+                            PostbackTemplateAction(
+                                label='到價通知',
+                                text='到價通知',
+                                data='到價通知'
+                            ),
+                            PostbackTemplateAction(
+                                label='到期日通知',
+                                text='到期日通知',
+                                data='到期日通知'
+                            ),
+                            # MessageTemplateAction(
+                            #     label='message1',
+                            #     text='message text1'
+                            # ),
+                            # URITemplateAction(
+                            #     label='uri1',
+                            #     uri='http://example.com/1'
+                            # )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
+                        title='this is menu2',
+                        text='description2',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URITemplateAction(
+                                label='連結2',
+                                uri='http://example.com/2'
+                            )
+                        ]
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,Carousel_template)
+    print('content: ' + event.message.text)
+
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    postback = event.postback.data
+    if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
+        flex_message = FlexSendMessage(
+            alt_text='hello',
+            contents={
+                "type": "bubble",
+                "styles": {
+                    "footer": {
+                        "separator": True
+                    }
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "RECEIPT",
+                            "weight": "bold",
+                            "color": "#1DB446",
+                            "size": "sm"
+                        },
+                        {
+                            "type": "text",
+                            "text": "您的{}資產總覽".format(postback[:2]),
+                            "weight": "bold",
+                            "size": "xxl",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                            "size": "xs",
+                            "color": "#aaaaaa",
+                            "wrap": True
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "margin": "xxl",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Energy Drink",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$2.99",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Chewing Gum",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$0.99",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Bottled Water",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$3.33",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "separator",
+                                    "margin": "xxl"
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "margin": "xxl",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "ITEMS",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "3",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "TOTAL",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$7.31",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "CASH",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$8.0",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "CHANGE",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$0.69",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "PAYMENT ID",
+                                    "size": "xs",
+                                    "color": "#aaaaaa",
+                                    "flex": 0
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "#743289384279",
+                                    "color": "#aaaaaa",
+                                    "size": "xs",
+                                    "align": "end"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "color": "#f2aa5c",
+                            "action": {
+                                "type": "uri",
+                                "label": "查看圖表",
+                                "uri": "https://investors-helper.herokuapp.com/charts"
                             }
                         }
                     ]
