@@ -156,7 +156,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
                         title='this is menu2',
                         text='description2',
                         actions=[
@@ -185,143 +185,345 @@ def handle_message(event):
 def handle_postback(event):
     postback = event.postback.data
     if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
-        bubble = BubbleContainer(
-            direction='ltr',
-            hero=ImageComponent(
-                url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                size='full',
-                aspect_ratio='20:13',
-                aspect_mode='cover',
-                action=URIAction(uri='http://example.com', label='label')
-            ),
-            body=BoxComponent(
-                layout='vertical',
-                contents=[
-                    # title
-                    TextComponent(text='您的{}資產總覽'.format(postback[:2]), weight='bold', size='xl'),
-                    # review
-                    # BoxComponent(
-                    #     layout='baseline',
-                    #     margin='md',
-                    #     contents=[
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                    #         TextComponent(text='4.0', size='sm', color='#999999', margin='md',
-                    #                       flex=0)
-                    #     ]
-                    # ),
-                    # info
-                    BoxComponent(
-                        layout='vertical',
-                        margin='lg',
-                        spacing='sm',
-                        contents=[
-                            BoxComponent(
-                                layout='baseline',
-                                spacing='sm',
-                                contents=[
-                                    TextComponent(
-                                        text='Place',
-                                        color='#aaaaaa',
-                                        size='sm',
-                                        flex=1
-                                    ),
-                                    TextComponent(
-                                        text='Shinjuku, Tokyo',
-                                        wrap=True,
-                                        color='#666666',
-                                        size='sm',
-                                        flex=5
-                                    )
-                                ],
-                            ),
-                            BoxComponent(
-                                layout='baseline',
-                                spacing='sm',
-                                contents=[
-                                    TextComponent(
-                                        text='Time',
-                                        color='#aaaaaa',
-                                        size='sm',
-                                        flex=1
-                                    ),
-                                    TextComponent(
-                                        text="10:00 - 23:00",
-                                        wrap=True,
-                                        color='#666666',
-                                        size='sm',
-                                        flex=5,
-                                    ),
-                                ],
-                            ),
-                        ],
-                    )
-                ],
-            ),
-            footer=BoxComponent(
-                layout='vertical',
-                spacing='sm',
-                contents=[
-                    # callAction, separator, websiteAction
-                    SpacerComponent(size='sm'),
-                    # callAction
-                    ButtonComponent(
-                        style='primary',
-                        color='#f2aa5c',
-                        height='sm',
-                        action=URIAction(label='查看圖表', uri='https://investors-helper.herokuapp.com/charts'),
-                    ),
-                    # separator
-                    SeparatorComponent(),
-                    # websiteAction
-                    ButtonComponent(
-                        style='link',
-                        height='sm',
-                        action=URIAction(label='WEBSITE', uri="https://example.com")
-                    )
-                ]
-            ),
+        flex_message = FlexSendMessage(
+            alt_text='hello',
+            contents={
+                "type": "bubble",
+                "styles": {
+                    "footer": {
+                    "separator": "true"
+                    }
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                    {
+                        "type": "text",
+                        "text": "RECEIPT",
+                        "weight": "bold",
+                        "color": "#1DB446",
+                        "size": "sm"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Brown Store",
+                        "weight": "bold",
+                        "size": "xxl",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                        "size": "xs",
+                        "color": "#aaaaaa",
+                        "wrap": "true"
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "Energy Drink",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "$2.99",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "Chewing Gum",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "$0.99",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "Bottled Water",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "$3.33",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "xxl",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "ITEMS",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "3",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "TOTAL",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "$7.31",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "CASH",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "$8.0",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "CHANGE",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "$0.69",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "margin": "md",
+                        "contents": [
+                        {
+                            "type": "text",
+                            "text": "PAYMENT ID",
+                            "size": "xs",
+                            "color": "#aaaaaa",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "#743289384279",
+                            "color": "#aaaaaa",
+                            "size": "xs",
+                            "align": "end"
+                        }
+                        ]
+                    }
+                    ]
+                },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "color": "#f2aa5c",
+                            "action": {
+                                "type": "uri",
+                                "label": "Add to wish list",
+                                "uri": "https://linecorp.com"
+                            }
+                        }
+                    ]
+                }
+            }
         )
-        message = FlexSendMessage(alt_text="hello", contents=bubble)
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, flex_message)
+        # bubble = BubbleContainer(
+        #     direction='ltr',
+        #     hero=ImageComponent(
+        #         url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+        #         size='full',
+        #         aspect_ratio='20:13',
+        #         aspect_mode='cover',
+        #         action=URIAction(uri='http://example.com', label='label')
+        #     ),
+        #     body=BoxComponent(
+        #         layout='vertical',
+        #         contents=[
+        #             # title
+        #             TextComponent(text='您的{}資產總覽'.format(postback[:2]), weight='bold', size='xl'),
+        #             # review
+        #             # BoxComponent(
+        #             #     layout='baseline',
+        #             #     margin='md',
+        #             #     contents=[
+        #             #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+        #             #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+        #             #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+        #             #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+        #             #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+        #             #         TextComponent(text='4.0', size='sm', color='#999999', margin='md',
+        #             #                       flex=0)
+        #             #     ]
+        #             # ),
+        #             # info
+        #             BoxComponent(
+        #                 layout='vertical',
+        #                 margin='lg',
+        #                 spacing='sm',
+        #                 contents=[
+        #                     BoxComponent(
+        #                         layout='baseline',
+        #                         spacing='sm',
+        #                         contents=[
+        #                             TextComponent(
+        #                                 text='Place',
+        #                                 color='#aaaaaa',
+        #                                 size='sm',
+        #                                 flex=1
+        #                             ),
+        #                             TextComponent(
+        #                                 text='Shinjuku, Tokyo',
+        #                                 wrap=True,
+        #                                 color='#666666',
+        #                                 size='sm',
+        #                                 flex=5
+        #                             )
+        #                         ],
+        #                     ),
+        #                     BoxComponent(
+        #                         layout='baseline',
+        #                         spacing='sm',
+        #                         contents=[
+        #                             TextComponent(
+        #                                 text='Time',
+        #                                 color='#aaaaaa',
+        #                                 size='sm',
+        #                                 flex=1
+        #                             ),
+        #                             TextComponent(
+        #                                 text="10:00 - 23:00",
+        #                                 wrap=True,
+        #                                 color='#666666',
+        #                                 size='sm',
+        #                                 flex=5,
+        #                             ),
+        #                         ],
+        #                     ),
+        #                 ],
+        #             )
+        #         ],
+        #     ),
+        #     footer=BoxComponent(
+        #         layout='vertical',
+        #         spacing='sm',
+        #         contents=[
+        #             # callAction, separator, websiteAction
+        #             SpacerComponent(size='sm'),
+        #             # callAction
+        #             ButtonComponent(
+        #                 style='primary',
+        #                 color='#f2aa5c',
+        #                 height='sm',
+        #                 action=URIAction(label='查看圖表', uri='https://investors-helper.herokuapp.com/charts'),
+        #             ),
+        #             # separator
+        #             SeparatorComponent(),
+        #             # websiteAction
+        #             ButtonComponent(
+        #                 style='link',
+        #                 height='sm',
+        #                 action=URIAction(label='WEBSITE', uri="https://example.com")
+        #             )
+        #         ]
+        #     ),
+        # )
+        # message = FlexSendMessage(alt_text="hello", contents=bubble)
+        # line_bot_api.reply_message(event.reply_token, message)
 
 @app.route("/charts", methods=['GET'])
 def show_charts():
-    # categories = ['北部', '中部', '南部']
-    # north = {
-    #     'name': '北部',
-    #     'data': [10],
-    #     'color': 'green',
-    # }
-
-    # central = {
-    #     'name': '中部',
-    #     'data': [20],
-    #     'color': 'red',
-    # }
-
-    # south = {
-    #     'name': '南部',
-    #     'data': [5],
-    #     'color': 'blue',
-    # }
-
-    # chart = {
-    #     'chart': {'type': 'column'},
-    #     'title': {'text': '會員居住地分布'},
-    #     'xAxis': {'categories': categories},
-    #     'series': [north, central, south],
-    #     'plotOptions': {
-    #         'series': {
-    #             'grouping': False,
-    #         }
-    #     }
-    # }
-
-    # dump = json.dumps(chart)
     return render_template('charts.html')
 
 
