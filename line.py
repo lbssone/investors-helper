@@ -282,43 +282,23 @@ def handle_message(event):
                                 "label": "查看圖表",
                                 "uri": "https://investors-helper.herokuapp.com/charts"
                             }
+                        },
+                        {
+                            "type": "button",
+                            "style": "secondary",
+                            "action": {
+                                "type": "postback",
+                                "label": "投資帳務列表",
+                                "text": "投資帳務列表",
+                                "data": "投資帳務列表"
+                            }
                         }
                     ]
                 }
             }
         )
 
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                title='{}的帳務資訊列表'.format(user_name),
-                text='請選擇欲查看之帳務',
-                actions=[
-                    PostbackAction(
-                        label='股票',
-                        display_text='股票',
-                        data='股票:帳務'
-                    ),
-                    PostbackAction(
-                        label='基金',
-                        display_text='基金',
-                        data='基金:帳務'
-                    ),
-                    PostbackAction(
-                        label='外匯',
-                        display_text='外匯',
-                        data='外匯:帳務'
-                    ),
-                     PostbackAction(
-                        label='定存',
-                        display_text='定存',
-                        data='定存:帳務'
-                    ),
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, [flex_message, buttons_template_message])
+        line_bot_api.reply_message(event.reply_token, flex_message)
         
     elif user_input == 'no':
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
@@ -653,6 +633,38 @@ def handle_postback(event):
             }
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
+    elif postback == '投資帳務列表':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
+                title='{}的帳務資訊列表'.format(user_name),
+                text='請選擇欲查看之帳務',
+                actions=[
+                    PostbackAction(
+                        label='股票',
+                        display_text='股票',
+                        data='股票:帳務'
+                    ),
+                    PostbackAction(
+                        label='基金',
+                        display_text='基金',
+                        data='基金:帳務'
+                    ),
+                    PostbackAction(
+                        label='外匯',
+                        display_text='外匯',
+                        data='外匯:帳務'
+                    ),
+                    PostbackAction(
+                        label='定存',
+                        display_text='定存',
+                        data='定存:帳務'
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
         # bubble = BubbleContainer(
         #     direction='ltr',
         #     hero=ImageComponent(
