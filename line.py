@@ -76,7 +76,7 @@ def handle_message(event):
                         },
                         {
                             "type": "text",
-                            "text": "您的{}資產總覽".format(postback[:2]),
+                            "text": "您的投資資產總覽",
                             "weight": "bold",
                             "size": "xxl",
                             "margin": "md"
@@ -288,7 +288,7 @@ def handle_message(event):
             }
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
-        
+
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
