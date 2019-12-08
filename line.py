@@ -185,8 +185,48 @@ def handle_message(event):
 def handle_postback(event):
     postback = event.postback.data
     if postback == '股票:帳務' or postback == '基金:帳務' or postback == '外匯:帳務' or postback == '定存:帳務':
+        # flex_message = FlexSendMessage(
+        #     alt_text="hello",
+        #     contents={
+        #         "type": "bubble",
+        #         "styles": {
+        #             "footer": {
+        #                 "separator": True
+        #             }
+        #         },
+        #         "hero": {
+        #             "type": "image",
+        #             "url": "https://example.com/cafe.jpg",
+        #             "size": "full",
+        #             "aspectRatio": "20:13",
+        #             "aspectMode": "cover",
+        #             "action": {
+        #             "type": "uri",
+        #             "uri": "http://example.com",
+        #             "label": "label"
+        #             }
+        #         },
+        #         "footer": {
+        #             "type": "box",
+        #             "layout": "vertical",
+        #             "spacing": "sm",
+        #             "contents": [
+        #             {
+        #                 "type": "button",
+        #                 "style": "primary",
+        #                 "color": "#f2aa5c",
+        #                 "action": {
+        #                 "type": "uri",
+        #                 "label": "Add to wish list",
+        #                 "uri": "https://linecorp.com"
+        #                 }
+        #             }
+        #             ]
+        #         }
+        #     }
+        # )
         flex_message = FlexSendMessage(
-            alt_text="hello",
+            alt_text='hello',
             contents={
                 "type": "bubble",
                 "styles": {
@@ -194,270 +234,230 @@ def handle_postback(event):
                         "separator": True
                     }
                 },
-                "hero": {
-                    "type": "image",
-                    "url": "https://example.com/cafe.jpg",
-                    "size": "full",
-                    "aspectRatio": "20:13",
-                    "aspectMode": "cover",
-                    "action": {
-                    "type": "uri",
-                    "uri": "http://example.com",
-                    "label": "label"
-                    }
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "RECEIPT",
+                            "weight": "bold",
+                            "color": "#1DB446",
+                            "size": "sm"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Brown Store",
+                            "weight": "bold",
+                            "size": "xxl",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                            "size": "xs",
+                            "color": "#aaaaaa",
+                            "wrap": True
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "margin": "xxl",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Energy Drink",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$2.99",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Chewing Gum",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$0.99",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "Bottled Water",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "flex": 0
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$3.33",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "separator",
+                                    "margin": "xxl"
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "margin": "xxl",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "ITEMS",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "3",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "TOTAL",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$7.31",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "CASH",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$8.0",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "CHANGE",
+                                            "size": "sm",
+                                            "color": "#555555"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "$0.69",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "end"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "PAYMENT ID",
+                                    "size": "xs",
+                                    "color": "#aaaaaa",
+                                    "flex": 0
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "#743289384279",
+                                    "color": "#aaaaaa",
+                                    "size": "xs",
+                                    "align": "end"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 "footer": {
                     "type": "box",
                     "layout": "vertical",
                     "spacing": "sm",
                     "contents": [
-                    {
-                        "type": "button",
-                        "style": "primary",
-                        "color": "#f2aa5c",
-                        "action": {
-                        "type": "uri",
-                        "label": "Add to wish list",
-                        "uri": "https://linecorp.com"
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "color": "#f2aa5c",
+                            "action": {
+                                "type": "uri",
+                                "label": "Add to wish list",
+                                "uri": "https://linecorp.com"
+                            }
                         }
-                    }
                     ]
                 }
             }
         )
-        # flex_message = FlexSendMessage(
-        #     alt_text='hello',
-        #     contents={
-        #         "type": "bubble",
-        #         "styles": {
-        #             "footer": {
-        #                 "separator": "true"
-        #             }
-        #         },
-        #         "body": {
-        #             "type": "box",
-        #             "layout": "vertical",
-        #             "contents": [
-        #                 {
-        #                     "type": "text",
-        #                     "text": "RECEIPT",
-        #                     "weight": "bold",
-        #                     "color": "#1DB446",
-        #                     "size": "sm"
-        #                 },
-        #                 {
-        #                     "type": "text",
-        #                     "text": "Brown Store",
-        #                     "weight": "bold",
-        #                     "size": "xxl",
-        #                     "margin": "md"
-        #                 },
-        #                 {
-        #                     "type": "text",
-        #                     "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
-        #                     "size": "xs",
-        #                     "color": "#aaaaaa",
-        #                     "wrap": "true"
-        #                 },
-        #                 {
-        #                     "type": "separator",
-        #                     "margin": "xxl"
-        #                 },
-        #                 {
-        #                     "type": "box",
-        #                     "layout": "vertical",
-        #                     "margin": "xxl",
-        #                     "spacing": "sm",
-        #                     "contents": [
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "Energy Drink",
-        #                                     "size": "sm",
-        #                                     "color": "#555555",
-        #                                     "flex": 0
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$2.99",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "Chewing Gum",
-        #                                     "size": "sm",
-        #                                     "color": "#555555",
-        #                                     "flex": 0
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$0.99",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "Bottled Water",
-        #                                     "size": "sm",
-        #                                     "color": "#555555",
-        #                                     "flex": 0
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$3.33",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "separator",
-        #                             "margin": "xxl"
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "margin": "xxl",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "ITEMS",
-        #                                     "size": "sm",
-        #                                     "color": "#555555"
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "3",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "TOTAL",
-        #                                     "size": "sm",
-        #                                     "color": "#555555"
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$7.31",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "CASH",
-        #                                     "size": "sm",
-        #                                     "color": "#555555"
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$8.0",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         },
-        #                         {
-        #                             "type": "box",
-        #                             "layout": "horizontal",
-        #                             "contents": [
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "CHANGE",
-        #                                     "size": "sm",
-        #                                     "color": "#555555"
-        #                                 },
-        #                                 {
-        #                                     "type": "text",
-        #                                     "text": "$0.69",
-        #                                     "size": "sm",
-        #                                     "color": "#111111",
-        #                                     "align": "end"
-        #                                 }
-        #                             ]
-        #                         }
-        #                     ]
-        #                 },
-        #                 {
-        #                     "type": "separator",
-        #                     "margin": "xxl"
-        #                 },
-        #                 {
-        #                     "type": "box",
-        #                     "layout": "horizontal",
-        #                     "margin": "md",
-        #                     "contents": [
-        #                         {
-        #                             "type": "text",
-        #                             "text": "PAYMENT ID",
-        #                             "size": "xs",
-        #                             "color": "#aaaaaa",
-        #                             "flex": 0
-        #                         },
-        #                         {
-        #                             "type": "text",
-        #                             "text": "#743289384279",
-        #                             "color": "#aaaaaa",
-        #                             "size": "xs",
-        #                             "align": "end"
-        #                         }
-        #                     ]
-        #                 }
-        #             ]
-        #         },
-        #         "footer": {
-        #             "type": "box",
-        #             "layout": "vertical",
-        #             "spacing": "sm",
-        #             "contents": [
-        #                 {
-        #                     "type": "button",
-        #                     "style": "primary",
-        #                     "color": "#f2aa5c",
-        #                     "action": {
-        #                         "type": "uri",
-        #                         "label": "Add to wish list",
-        #                         "uri": "https://linecorp.com"
-        #                     }
-        #                 }
-        #             ]
-        #         }
-        #     }
-        # )
         line_bot_api.reply_message(event.reply_token, flex_message)
         # bubble = BubbleContainer(
         #     direction='ltr',
