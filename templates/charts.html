@@ -14,9 +14,9 @@
   </style>
 </head>
 <body>
-  <h1>Hi there.</h1>
+  <h1>您的投資資產配置</h1>
   <div id='container'></div>
-  <<script>
+  <script>
       Highcharts.chart('container', {
           chart: {
               backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -29,7 +29,7 @@
               text: '性別'
           },
           tooltip: {
-              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+              pointFormat: '佔{series.name}的<b>{point.percentage:.1f}%</b>'
           },
           plotOptions: {
               pie: {
@@ -42,15 +42,14 @@
               }
           },
           series: [{
-              name: '性別',
+              name: '投資資產',
               colorByPoint: true,
               data: [{
-                  name: '女性',
+                  name: '股票',
                   y: 50,
                   sliced: true,
-                  selected: true
               }, {
-                  name: '男性',
+                  name: '基金',
                   y: 30
               }]
           }]
