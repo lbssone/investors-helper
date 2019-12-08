@@ -605,6 +605,7 @@ def handle_postback(event):
                             "type": "button",
                             "style": "primary",
                             "color": "#f2aa5c",
+                            "height": "sm",
                             "action": {
                                 "type": "uri",
                                 "label": "查看圖表",
