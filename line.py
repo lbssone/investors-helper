@@ -50,7 +50,9 @@ def handle_message(event):
     user_name = profile.display_name
     user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
     
-
+    if user_input in hi_list:
+        reply = 'Hi ' + user_name
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
     if user_input == '查看帳務資訊':
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
