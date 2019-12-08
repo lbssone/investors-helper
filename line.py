@@ -265,6 +265,7 @@ def handle_postback(event):
                     SpacerComponent(size='sm'),
                     # callAction
                     ButtonComponent(
+                        color='#f2aa5c'
                         height='sm',
                         action=URIAction(label='查看圖表', uri='https://investors-helper.herokuapp.com/charts'),
                     ),
