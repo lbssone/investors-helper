@@ -188,7 +188,7 @@ def handle_postback(event):
         flex_message = FlexSendMessage(
             alt_text='hello',
             contents={
-                'type': 'bubble',
+                "type": "bubble",
                 'direction': 'ltr',
                 'hero': {
                     'type': 'image',
