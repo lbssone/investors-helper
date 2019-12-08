@@ -286,39 +286,39 @@ def handle_postback(event):
 
 @app.route("/charts", methods=['GET'])
 def show_charts():
-    categories = ['北部', '中部', '南部']
-    north = {
-        'name': '北部',
-        'data': [10],
-        'color': 'green',
-    }
+    # categories = ['北部', '中部', '南部']
+    # north = {
+    #     'name': '北部',
+    #     'data': [10],
+    #     'color': 'green',
+    # }
 
-    central = {
-        'name': '中部',
-        'data': [20],
-        'color': 'red',
-    }
+    # central = {
+    #     'name': '中部',
+    #     'data': [20],
+    #     'color': 'red',
+    # }
 
-    south = {
-        'name': '南部',
-        'data': [5],
-        'color': 'blue',
-    }
+    # south = {
+    #     'name': '南部',
+    #     'data': [5],
+    #     'color': 'blue',
+    # }
 
-    chart = {
-        'chart': {'type': 'column'},
-        'title': {'text': '會員居住地分布'},
-        'xAxis': {'categories': categories},
-        'series': [north, central, south],
-        'plotOptions': {
-            'series': {
-                'grouping': False,
-            }
-        }
-    }
+    # chart = {
+    #     'chart': {'type': 'column'},
+    #     'title': {'text': '會員居住地分布'},
+    #     'xAxis': {'categories': categories},
+    #     'series': [north, central, south],
+    #     'plotOptions': {
+    #         'series': {
+    #             'grouping': False,
+    #         }
+    #     }
+    # }
 
-    dump = json.dumps(chart)
-    return render_template('charts.html', chart=dump)
+    # dump = json.dumps(chart)
+    return render_template('charts.html')
 
 
 if __name__ == "__main__":

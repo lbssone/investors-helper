@@ -16,8 +16,45 @@
 <body>
   <h1>Hi there.</h1>
   <div id='container'></div>
-  <script>
-    Highcharts.chart('container', {{ chart|safe }});
+  <<script>
+      Highcharts.chart('container', {
+          chart: {
+              backgroundColor: 'rgba(0, 0, 0, 0)',
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false,
+              type: 'pie'
+          },
+          title: {
+              text: '性別'
+          },
+          tooltip: {
+              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+              pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                      enabled: false
+                  },
+                  showInLegend: true
+              }
+          },
+          series: [{
+              name: '性別',
+              colorByPoint: true,
+              data: [{
+                  name: '女性',
+                  y: 50,
+                  sliced: true,
+                  selected: true
+              }, {
+                  name: '男性',
+                  y: 30
+              }]
+          }]
+      });
   </script>
 </body>
 </html>
