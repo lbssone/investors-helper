@@ -39,7 +39,7 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "sm"
                     },
                     {
                         "type": "box",
@@ -262,12 +262,12 @@ accounts_contents = {
                         "type": "text",
                         "text": "您的股票資產總覽",
                         "weight": "bold",
-                        "size": "xxl",
+                        "size": "xl",
                         "margin": "md"
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "sm"
                     },
                     {
                         "type": "box",
