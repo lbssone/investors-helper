@@ -13,6 +13,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
+import twstock
 
 
 app = Flask(__name__)
@@ -56,7 +57,7 @@ def handle_message(event):
     if user_input in hi_list:
         reply = 'Hi ' + user_name
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
-    if user_input == '查看帳務資訊':
+    elif user_input == '查看帳務資訊':
         flex_message = FlexSendMessage(
             alt_text='hello',
             contents=accounts_contents
@@ -64,8 +65,29 @@ def handle_message(event):
 
         line_bot_api.reply_message(event.reply_token, flex_message)
         
-    elif user_input == 'no':
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='no'))
+    elif user_input == '到價':
+        tsmc = twstock.realtime.get('2330')
+        latest_price = tsmc['realtime']['latest_trade_price']
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+                text='【到價通知】\n台積電前的股價為{}，已達設定價格'.format(latest_price),
+                actions=[
+                    PostbackAction(
+                        label='前往下單',
+                        display_text='前往下單',
+                        data='前往下單'
+                    ),
+                    PostbackAction(
+                        label='更改通知價格',
+                        display_text='更改通知價格',
+                        data='更改通知價格'
+                    ),
+                ]
+            )
+        )
+
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif user_input == '投資資訊':
         investment_info_message = TextSendMessage(
             text='請選擇欲查看之資訊',
@@ -175,9 +197,9 @@ def handle_postback(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    elif postback == '資產變動提醒' or postback == '到價通知' or postback == '到期日通知':
+    elif postback == '到價通知':
         investment_info_message = TextSendMessage(
-            text='請選擇欲查看之資訊',
+            text='請選擇欲設定之項目',
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(
