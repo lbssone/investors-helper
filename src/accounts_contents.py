@@ -265,7 +265,7 @@ accounts_contents = {
                     {
                         "type": "button",
                         "style": "primary",
-                        "color": "#f2aa5c",
+                        "color": "#327ba8",
                         "height": "sm",
                         "action": {
                             "type": "uri",
