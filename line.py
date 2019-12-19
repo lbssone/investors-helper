@@ -59,6 +59,7 @@ def handle_message(event):
     if user_input == '查看帳務資訊':
         flex_message = FlexSendMessage(
             alt_text='hello',
+            type='carousel',
             contents=accounts_contents
         )
 
