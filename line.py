@@ -73,10 +73,9 @@ def handle_message(event):
             template=ConfirmTemplate(
                 text='【到價通知】\n台積電前的股價為{}，已達設定價格'.format(latest_price),
                 actions=[
-                    PostbackAction(
-                        label='前往下單',
-                        display_text='前往下單',
-                        data='前往下單'
+                    URIAction(
+                        label='前往app下單',
+                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
                     ),
                     PostbackAction(
                         label='更改通知價格',
