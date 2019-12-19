@@ -5,7 +5,7 @@ today = datetime.now().strftime('%Y-%m-%d')
 accounts_contents = {
     'type': 'carousel',
     'contents': [
-        # all
+        # overview
         {
             "type": "bubble",
             "styles": {
@@ -237,7 +237,7 @@ accounts_contents = {
                 ]
             }
         },
-        # stocks
+        # stock
         {
             "type": "bubble",
             "styles": {
@@ -458,15 +458,15 @@ accounts_contents = {
                         "height": "sm",
                         "action": {
                             "type": "postback",
-                            "label": "詳細資訊:股票",
-                            "text": "詳細資訊:股票",
+                            "label": "詳細資訊",
+                            "text": "詳細資訊",
                             "data": "詳細資訊:股票"
                         }
                     }
                 ]
             }
         },
-        # funds
+        # fund
         {
             "type": "bubble",
             "styles": {
@@ -687,14 +687,15 @@ accounts_contents = {
                         "height": "sm",
                         "action": {
                             "type": "postback",
-                            "label": "詳細資訊:基金",
-                            "text": "詳細資訊:基金",
+                            "label": "詳細資訊",
+                            "text": "詳細資訊",
                             "data": "詳細資訊:基金"
                         }
                     }
                 ]
             }
         },
+        # foreign exchange
         {
             "type": "bubble",
             "styles": {
@@ -915,14 +916,15 @@ accounts_contents = {
                         "height": "sm",
                         "action": {
                             "type": "postback",
-                            "label": "詳細資訊:外匯",
-                            "text": "詳細資訊:外匯",
+                            "label": "詳細資訊",
+                            "text": "詳細資訊",
                             "data": "詳細資訊:外匯"
                         }
                     }
                 ]
             }
         },
+        # other
         {
             "type": "bubble",
             "styles": {
@@ -1024,15 +1026,14 @@ accounts_contents = {
                             },
                             {
                                 "type": "text",
-                                "text": "定存",
+                                "text": "保險",
                                 "weight": "bold",
                                 "size": "md",
-                                "margin": "md"
+                                "margin": "xxl"
                             },
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "text",
@@ -1157,9 +1158,9 @@ accounts_contents = {
                         "height": "sm",
                         "action": {
                             "type": "postback",
-                            "label": "詳細資訊:股票",
-                            "text": "詳細資訊:股票",
-                            "data": "詳細資訊:股票"
+                            "label": "詳細資訊",
+                            "text": "詳細資訊",
+                            "data": "詳細資訊:其他"
                         }
                     }
                 ]
