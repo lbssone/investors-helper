@@ -200,7 +200,7 @@ def handle_postback(event):
                     QuickReplyButton(
                         action=PostbackAction(
                             label="外匯", 
-                            text="外匯"
+                            text="外匯",
                             data="到價通知:外匯"
 
                         ),
