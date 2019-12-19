@@ -231,7 +231,7 @@ accounts_contents = {
                         "action": {
                             "type": "uri",
                             "label": "查看圖表",
-                            "uri": "https://investors-helper.herokuapp.com/charts"
+                            "uri": "https://fintech-salon-wealth-tracker.herokuapp.com/charts"
                         }
                     }
                 ]
@@ -449,7 +449,7 @@ accounts_contents = {
                         "action": {
                             "type": "uri",
                             "label": "查看圖表",
-                            "uri": "https://investors-helper.herokuapp.com/charts"
+                            "uri": "https://fintech-salon-wealth-tracker.herokuapp.com/chart2"
                         }
                     },
                     {
