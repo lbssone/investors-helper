@@ -28,7 +28,7 @@ accounts_contents = {
                         "type": "text",
                         "text": "您的投資資產總覽",
                         "weight": "bold",
-                        "size": "xxl",
+                        "size": "xl",
                         "margin": "md"
                     },
                     {
@@ -251,7 +251,7 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "您的股票資產總覽",
+                        "text": "【股票】資產總覽",
                         "weight": "bold",
                         "size": "xl",
                         "margin": "md"
@@ -480,7 +480,7 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "您的基金資產總覽",
+                        "text": "【基金】資產總覽",
                         "weight": "bold",
                         "size": "xl",
                         "margin": "md"
@@ -709,7 +709,7 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "您的外匯資產總覽",
+                        "text": "【外匯】資產總覽",
                         "weight": "bold",
                         "size": "xl",
                         "margin": "md"
@@ -938,7 +938,7 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "您的其他資產總覽",
+                        "text": "【其他】資產總覽",
                         "weight": "bold",
                         "size": "xl",
                         "margin": "md"
