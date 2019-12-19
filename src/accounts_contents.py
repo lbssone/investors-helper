@@ -49,6 +49,45 @@ accounts_contents = {
                         "spacing": "sm",
                         "contents": [
                             {
+                                "type": "text",
+                                "text": "總投入成本",
+                                "weight": "bold",
+                                "size": "lg",
+                                "color": "#327ba8",
+                                "margin": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "TWD",
+                                    "size": "md",
+                                    "flex": 0
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "10,000",
+                                    "size": "md",
+                                    "align": "end"
+                                }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                            {
                                 "type": "box",
                                 "layout": "horizontal",
                                 "contents": [
