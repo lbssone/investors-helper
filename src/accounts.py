@@ -1,6 +1,6 @@
-import datetime
+from datetime import datetime
 
-today = datetime.datetime.today().date()
+today = datetime.now().strftime('%Y-%m-%d')
 
 accounts_contents = {
     'type': 'carousel',
