@@ -12,7 +12,7 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-import accounts_contents from './src/accounts'
+from src.accounts import accounts_contents  
 
 
 app = Flask(__name__)
