@@ -71,7 +71,7 @@ def handle_message(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-                text='【到價通知】\n台積電前的股價為{}，已達設定價格'.format(latest_price),
+                text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(latest_price),
                 actions=[
                     URIAction(
                         label='前往app下單',
