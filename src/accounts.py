@@ -1,3 +1,7 @@
+import datetime
+
+today = datetime.datetime.today().date()
+
 accounts_contents = {
     'type': 'carousel',
     'contents': [
@@ -12,23 +16,23 @@ accounts_contents = {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
-                    {
-                        "type": "text",
-                        "text": "RECEIPT",
-                        "weight": "bold",
-                        "color": "#1DB446",
-                        "size": "sm"
-                    },
+                    # {
+                    #     "type": "text",
+                    #     "text": "RECEIPT",
+                    #     "weight": "bold",
+                    #     "color": "#1DB446",
+                    #     "size": "sm"
+                    # },
                     {
                         "type": "text",
                         "text": "您的投資資產總覽",
                         "weight": "bold",
-                        "size": "xxl",
+                        "size": "xl",
                         "margin": "md"
                     },
                     {
                         "type": "text",
-                        "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                        "text": today,
                         "size": "xs",
                         "color": "#aaaaaa",
                         "wrap": True
@@ -256,24 +260,10 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "RECEIPT",
-                        "weight": "bold",
-                        "color": "#1DB446",
-                        "size": "sm"
-                    },
-                    {
-                        "type": "text",
                         "text": "您的股票資產總覽",
                         "weight": "bold",
                         "size": "xxl",
                         "margin": "md"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
-                        "size": "xs",
-                        "color": "#aaaaaa",
-                        "wrap": True
                     },
                     {
                         "type": "separator",
