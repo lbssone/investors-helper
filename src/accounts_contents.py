@@ -53,7 +53,7 @@ accounts_contents = {
                                 "text": "總投入成本",
                                 "weight": "bold",
                                 "size": "lg",
-                                "color": "#327ba8",
+                                "color": "#0e0e73",
                                 "margin": "md"
                             },
                             {
@@ -265,7 +265,7 @@ accounts_contents = {
                     {
                         "type": "button",
                         "style": "primary",
-                        "color": "#327ba8",
+                        "color": "#f2aa5c",
                         "height": "sm",
                         "action": {
                             "type": "uri",
