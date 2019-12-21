@@ -87,39 +87,27 @@ def handle_message(event):
 
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif user_input == '投資資訊':
-        investment_info_message = TextSendMessage(
-            text='請選擇欲查看之資訊',
-            quick_reply=QuickReply(
-                items=[
-                    QuickReplyButton(
-                        action=URIAction(
-                            label="股票", 
-                            uri="https://www.cnyes.com/twstock/index.htm"
-                        ), 
-                        image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'
+        investment_info_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                text='請選擇欲查看之投資資訊',
+                actions=[
+                    URIAction(
+                        label="股票", 
+                        uri="https://www.cnyes.com/twstock/index.htm"
                     ),
-                    QuickReplyButton(
-                        action=PostbackAction(
-                            label="基金", 
-                            text="基金",
-                            data='投資資訊:基金'
-                        ), 
-                        image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'
+                    URIAction(
+                        label='基金',
                     ),
-                    QuickReplyButton(
-                        action=PostbackAction(
-                            label="外匯", 
-                            text="外匯",
-                            data='投資資訊:外匯'
-                        ), 
-                        image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png'
+                    URIAction(
+                        label='外匯',
                     )
                 ]
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif user_input == '設定':
-        Carousel_template = TemplateSendMessage(
+        Buttons_template = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 title='設定',
@@ -143,7 +131,7 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token,Carousel_template)
+        line_bot_api.reply_message(event.reply_token, Buttons_template)
     print('content: ' + event.message.text)
 
 @handler.add(PostbackEvent)
