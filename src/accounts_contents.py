@@ -556,20 +556,20 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "含息",
-                                    "size": "sm",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "+28(+0.47%)",
-                                    "size": "sm",
-                                    "weight": "bold",
-                                    "color": "#eb0505",
-                                    "align": "end"
-                                }
+                                    {
+                                        "type": "text",
+                                        "text": "含息",
+                                        "size": "sm",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "+28(+0.47%)",
+                                        "size": "sm",
+                                        "weight": "bold",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
                                 ]
                             },
                             {
@@ -577,20 +577,20 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "不含息",
-                                    "size": "sm",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "-8(-0.13%)",
-                                    "size": "sm",
-                                    "weight": "bold",
-                                    "color": "#00bf1d",
-                                    "align": "end"
-                                }
+                                    {
+                                        "type": "text",
+                                        "text": "不含息",
+                                        "size": "sm",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "-8(-0.13%)",
+                                        "size": "sm",
+                                        "weight": "bold",
+                                        "color": "#00b01b",
+                                        "align": "end"
+                                    }
                                 ]
                             }
                         ]
