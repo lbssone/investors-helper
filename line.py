@@ -92,67 +92,55 @@ def handle_message(event):
             text='請選擇欲查看之資訊',
             quick_reply=QuickReply(
                 items=[
-                    QuickReplyButton(action=MessageAction(label="股票", text="股票"), image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'),
-                    QuickReplyButton(action=MessageAction(label="基金", text="基金"), image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'),
-                    QuickReplyButton(action=MessageAction(label="外匯", text="外匯"), image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png')
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="股票", 
+                            text="股票",
+                            data='投資資訊:股票'
+                        ), 
+                        image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'
+                    ),
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="基金", 
+                            text="基金",
+                            data='投資資訊:基金'
+                        ), 
+                        image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'
+                    ),
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="外匯", 
+                            text="外匯",
+                            data='投資資訊:外匯'
+                        ), 
+                        image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png'
+                    )
                 ]
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif user_input == '設定':
         Carousel_template = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
-                        title='this is menu1',
-                        text='description1',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='資產變動提醒',
-                                text='資產變動提醒',
-                                data='資產變動提醒'
-                            ),
-                            PostbackTemplateAction(
-                                label='到價通知',
-                                text='到價通知',
-                                data='到價通知'
-                            ),
-                            PostbackTemplateAction(
-                                label='到期日通知',
-                                text='到期日通知',
-                                data='到期日通知'
-                            ),
-                            # MessageTemplateAction(
-                            #     label='message1',
-                            #     text='message text1'
-                            # ),
-                            # URITemplateAction(
-                            #     label='uri1',
-                            #     uri='http://example.com/1'
-                            # )
-                        ]
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='設定',
+                text='請選擇欲設定項目',
+                actions=[
+                    PostbackTemplateAction(
+                        label='資產變動提醒',
+                        text='資產變動提醒',
+                        data='資產變動提醒'
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URITemplateAction(
-                                label='連結2',
-                                uri='http://example.com/2'
-                            )
-                        ]
+                    PostbackTemplateAction(
+                        label='到價通知',
+                        text='到價通知',
+                        data='到價通知'
+                    ),
+                    PostbackTemplateAction(
+                        label='到期日通知',
+                        text='到期日通知',
+                        data='到期日通知'
                     )
                 ]
             )
