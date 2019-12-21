@@ -61,18 +61,18 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "TWD",
-                                    "size": "md",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "100,000",
-                                    "size": "md",
-                                    "align": "end"
-                                }
+                                    {
+                                        "type": "text",
+                                        "text": "TWD",
+                                        "size": "md",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "240,000",
+                                        "size": "md",
+                                        "align": "end"
+                                    }
                                 ]
                             }
                         ]
@@ -93,14 +93,14 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Energy Drink",
+                                        "text": "股票",
                                         "size": "sm",
                                         "color": "#555555",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$2.99",
+                                        "text": "TWD 50,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -113,14 +113,14 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Chewing Gum",
+                                        "text": "基金",
                                         "size": "sm",
                                         "color": "#555555",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$0.99",
+                                        "text": "TWD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -133,38 +133,14 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Bottled Water",
+                                        "text": "外匯",
                                         "size": "sm",
                                         "color": "#555555",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$3.33",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "ITEMS",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "3",
+                                        "text": "TWD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -177,13 +153,14 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "TOTAL",
+                                        "text": "定存",
                                         "size": "sm",
-                                        "color": "#555555"
+                                        "color": "#555555",
+                                        "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$7.31",
+                                        "text": "TWD 100,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -196,65 +173,22 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "CASH",
+                                        "text": "保險",
                                         "size": "sm",
-                                        "color": "#555555"
+                                        "color": "#555555",
+                                        "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$8.0",
+                                        "text": "TWD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
                                     }
                                 ]
                             },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CHANGE",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.69",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
                         ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "PAYMENT ID",
-                                "size": "xs",
-                                "color": "#aaaaaa",
-                                "flex": 0
-                            },
-                            {
-                                "type": "text",
-                                "text": "#743289384279",
-                                "color": "#aaaaaa",
-                                "size": "xs",
-                                "align": "end"
-                            }
-                        ]
-                    }
+                    }    
                 ]
             },
             "footer": {
