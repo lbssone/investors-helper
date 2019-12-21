@@ -69,7 +69,7 @@ accounts_contents = {
                                 },
                                 {
                                     "type": "text",
-                                    "text": "10,000",
+                                    "text": "100,000",
                                     "size": "md",
                                     "align": "end"
                                 }
@@ -527,6 +527,122 @@ accounts_contents = {
                     {
                         "type": "separator",
                         "margin": "md"
+                    },
+                    {
+                        "type": "text",
+                        "text": today,
+                        "size": "xs",
+                        "color": "#aaaaaa",
+                        "wrap": True
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                        {
+                            "type": "text",
+                            "text": "台幣參考損益",
+                            "weight": "bold",
+                            "size": "lg",
+                            "color": "#327ba8",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "含息",
+                                "size": "sm",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "+28(+0.47%)",
+                                "size": "sm",
+                                "weight": "bold",
+                                "color": "#eb0505",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "不含息",
+                                "size": "sm",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "-8(-0.13%)",
+                                "size": "sm",
+                                "weight": "bold",
+                                "color": "#08d427",
+                                "align": "end"
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                        {
+                            "type": "text",
+                            "text": "投入成本",
+                            "weight": "bold",
+                            "size": "lg",
+                            "color": "#327ba8",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "TWD",
+                                "size": "md",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "10,000",
+                                "size": "md",
+                                "align": "end"
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
                     },
                     {
                         "type": "box",
