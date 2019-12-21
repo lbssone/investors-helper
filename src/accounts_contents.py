@@ -296,6 +296,13 @@ accounts_contents = {
                         "margin": "md"
                     },
                     {
+                        "type": "text",
+                        "text": today,
+                        "size": "xs",
+                        "color": "#aaaaaa",
+                        "wrap": True
+                    },
+                    {
                         "type": "separator",
                         "margin": "md"
                     },
@@ -768,6 +775,13 @@ accounts_contents = {
                         "margin": "md"
                     },
                     {
+                        "type": "text",
+                        "text": today,
+                        "size": "xs",
+                        "color": "#aaaaaa",
+                        "wrap": True
+                    },
+                    {
                         "type": "separator",
                         "margin": "md"
                     },
@@ -777,172 +791,102 @@ accounts_contents = {
                         "margin": "xxl",
                         "spacing": "sm",
                         "contents": [
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Energy Drink",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$2.99",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Chewing Gum",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.99",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Bottled Water",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$3.33",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "ITEMS",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "3",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "TOTAL",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$7.31",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CASH",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$8.0",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CHANGE",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.69",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
+                        {
+                            "type": "text",
+                            "text": "外匯活存",
+                            "weight": "bold",
+                            "size": "md",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
                             {
                                 "type": "text",
-                                "text": "PAYMENT ID",
-                                "size": "xs",
-                                "color": "#aaaaaa",
+                                "text": "美金",
+                                "size": "sm",
+                                "color": "#555555",
                                 "flex": 0
                             },
                             {
                                 "type": "text",
-                                "text": "#743289384279",
-                                "color": "#aaaaaa",
-                                "size": "xs",
+                                "text": "$10,000",
+                                "size": "sm",
+                                "color": "#111111",
                                 "align": "end"
                             }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "日幣",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "￥30,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "text",
+                            "text": "外匯定存",
+                            "weight": "bold",
+                            "size": "md",
+                            "margin": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "美金",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "$10,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "日幣",
+                                "size": "sm",
+                                "color": "#555555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "￥30,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        }
                         ]
                     }
                 ]
@@ -995,6 +939,13 @@ accounts_contents = {
                         "weight": "bold",
                         "size": "xl",
                         "margin": "md"
+                    },
+                    {
+                        "type": "text",
+                        "text": today,
+                        "size": "xs",
+                        "color": "#aaaaaa",
+                        "wrap": True
                     },
                     {
                         "type": "separator",
