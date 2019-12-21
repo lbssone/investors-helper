@@ -543,61 +543,61 @@ accounts_contents = {
                         "margin": "xxl",
                         "spacing": "sm",
                         "contents": [
-                        {
-                            "type": "text",
-                            "text": "台幣參考損益",
-                            "weight": "bold",
-                            "size": "lg",
-                            "color": "#327ba8",
-                            "margin": "md"
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "spacing": "sm",
-                            "contents": [
                             {
                                 "type": "text",
-                                "text": "含息",
-                                "size": "sm",
-                                "flex": 0
+                                "text": "台幣參考損益",
+                                "weight": "bold",
+                                "size": "md",
+                                "color": "#327ba8",
+                                "margin": "md"
                             },
                             {
-                                "type": "text",
-                                "text": "+28(+0.47%)",
-                                "size": "sm",
-                                "weight": "bold",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "spacing": "sm",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "不含息",
-                                "size": "sm",
-                                "flex": 0
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "含息",
+                                    "size": "sm",
+                                    "flex": 0
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "+28(+0.47%)",
+                                    "size": "sm",
+                                    "weight": "bold",
+                                    "color": "#eb0505",
+                                    "align": "end"
+                                }
+                                ]
                             },
                             {
-                                "type": "text",
-                                "text": "-8(-0.13%)",
-                                "size": "sm",
-                                "weight": "bold",
-                                "color": "#00bf1d",
-                                "align": "end"
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "不含息",
+                                    "size": "sm",
+                                    "flex": 0
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "-8(-0.13%)",
+                                    "size": "sm",
+                                    "weight": "bold",
+                                    "color": "#00bf1d",
+                                    "align": "end"
+                                }
+                                ]
                             }
-                            ]
-                        }
                         ]
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "xl"
                     },
                     # 投入成本
                     {
@@ -610,47 +610,7 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "投入成本",
                                 "weight": "bold",
-                                "size": "lg",
-                                "color": "#327ba8",
-                                "margin": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "spacing": "sm",
-                                "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "TWD",
-                                    "size": "sm",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "10,000",
-                                    "size": "sm",
-                                    "align": "end"
-                                }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    # 帳面市值
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "帳面市值",
-                                "weight": "bold",
-                                "size": "lg",
+                                "size": "md",
                                 "color": "#327ba8",
                                 "margin": "md"
                             },
@@ -677,7 +637,47 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "xl"
+                    },
+                    # 帳面市值
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "帳面市值",
+                                "weight": "bold",
+                                "size": "md",
+                                "color": "#327ba8",
+                                "margin": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "TWD",
+                                        "size": "sm",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "10,000",
+                                        "size": "sm",
+                                        "align": "end"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xl"
                     },
                     # 累積總配息
                     {
@@ -690,7 +690,7 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "累積總配息",
                                 "weight": "bold",
-                                "size": "lg",
+                                "size": "md",
                                 "color": "#327ba8",
                                 "margin": "md"
                             },
@@ -715,10 +715,6 @@ accounts_contents = {
                             }
                         ]
                     },
-                    {
-                        "type": "separator",
-                        "margin": "md"
-                    }
                 ]
             },
             "footer": {
