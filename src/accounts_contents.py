@@ -548,7 +548,7 @@ accounts_contents = {
                                 "text": "台幣參考損益",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#327ba8",
+                                "color": "#215c80",
                                 "margin": "md"
                             },
                             {
@@ -611,7 +611,7 @@ accounts_contents = {
                                 "text": "投入成本",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#327ba8",
+                                "color": "#215c80",
                                 "margin": "md"
                             },
                             {
@@ -651,7 +651,7 @@ accounts_contents = {
                                 "text": "帳面市值",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#327ba8",
+                                "color": "#215c80",
                                 "margin": "md"
                             },
                             {
@@ -691,7 +691,7 @@ accounts_contents = {
                                 "text": "累積總配息",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#327ba8",
+                                "color": "#215c80",
                                 "margin": "md"
                             },
                             {
