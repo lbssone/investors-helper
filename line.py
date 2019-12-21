@@ -98,9 +98,11 @@ def handle_message(event):
                     ),
                     URIAction(
                         label='基金',
+                        uri="https://fund.cnyes.com/"
                     ),
                     URIAction(
                         label='外匯',
+                        uri="https://www.cnyes.com/forex/"
                     )
                 ]
             )
