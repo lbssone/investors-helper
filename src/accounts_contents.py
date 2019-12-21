@@ -685,6 +685,7 @@ accounts_contents = {
                         "layout": "vertical",
                         "margin": "xxl",
                         "spacing": "sm",
+                        "paddingBottom": "xl",
                         "contents": [
                             {
                                 "type": "text",
