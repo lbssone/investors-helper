@@ -547,7 +547,7 @@ accounts_contents = {
                             "type": "text",
                             "text": "台幣參考損益",
                             "weight": "bold",
-                            "size": "md",
+                            "size": "lg",
                             "color": "#327ba8",
                             "margin": "md"
                         },
@@ -588,7 +588,7 @@ accounts_contents = {
                                 "text": "-8(-0.13%)",
                                 "size": "sm",
                                 "weight": "bold",
-                                "color": "#08d427",
+                                "color": "#00bf1d",
                                 "align": "end"
                             }
                             ]
@@ -610,7 +610,7 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "投入成本",
                                 "weight": "bold",
-                                "size": "md",
+                                "size": "lg",
                                 "color": "#327ba8",
                                 "margin": "md"
                             },
@@ -650,7 +650,7 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "帳面市值",
                                 "weight": "bold",
-                                "size": "md",
+                                "size": "lg",
                                 "color": "#327ba8",
                                 "margin": "md"
                             },
@@ -659,18 +659,18 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "TWD",
-                                    "size": "sm",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "10,000",
-                                    "size": "sm",
-                                    "align": "end"
-                                }
+                                    {
+                                        "type": "text",
+                                        "text": "TWD",
+                                        "size": "sm",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "10,000",
+                                        "size": "sm",
+                                        "align": "end"
+                                    }
                                 ]
                             }
                         ]
@@ -690,7 +690,7 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "累積總配息",
                                 "weight": "bold",
-                                "size": "md",
+                                "size": "lg",
                                 "color": "#327ba8",
                                 "margin": "md"
                             },
@@ -699,169 +699,16 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "TWD",
-                                    "size": "sm",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "50",
-                                    "size": "sm",
-                                    "align": "end"
-                                }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": [
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Energy Drink",
+                                        "text": "TWD",
                                         "size": "sm",
-                                        "color": "#555555",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$2.99",
+                                        "text": "50",
                                         "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Chewing Gum",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.99",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Bottled Water",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$3.33",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "ITEMS",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "3",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "TOTAL",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$7.31",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CASH",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$8.0",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CHANGE",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.69",
-                                        "size": "sm",
-                                        "color": "#111111",
                                         "align": "end"
                                     }
                                 ]
@@ -870,28 +717,7 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "PAYMENT ID",
-                                "size": "xs",
-                                "color": "#aaaaaa",
-                                "flex": 0
-                            },
-                            {
-                                "type": "text",
-                                "text": "#743289384279",
-                                "color": "#aaaaaa",
-                                "size": "xs",
-                                "align": "end"
-                            }
-                        ]
+                        "margin": "md"
                     }
                 ]
             },
