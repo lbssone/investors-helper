@@ -13,6 +13,7 @@ from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
 import twstock
+import schedule
 import time
 import datetime
 
@@ -24,6 +25,8 @@ line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnD
 handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 
 user_set = set()
+tsmc = twstock.realtime.get('2330')
+tsmc_latest_price = float(tsmc['realtime']['latest_trade_price'])
 
 @app.route('/')
 def index():
@@ -40,6 +43,7 @@ def callback():
     # handle webhook body
     try:
         handler.handle(body, signature)
+        print('line-bot running...')
     except InvalidSignatureError:
         abort(400)
     return 'OK'
@@ -214,9 +218,7 @@ def handle_postback(event):
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
 
-def push_accounts_contents():
-    tsmc = twstock.realtime.get('2330')
-    latest_price = float(tsmc['realtime']['latest_trade_price'])
+def push_price_notification():
     confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -234,12 +236,25 @@ def push_accounts_contents():
                 ]
             )
         )
-    def notify_price():
-        line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
-    while latest_price < 330:
-        notify_price()
+    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
+
+def push_accounts_contents():
+    flex_message = FlexSendMessage(
+            alt_text='hello',
+            contents=accounts_contents
+        )
+    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=flex_message)
+
+def push_notification():
+    global tsmc_latest_price
+    schedule.every().day.at("17:22").do(push_accounts_contents)
+    while True:
+        schedule.run_pending()
         time.sleep(10)
-push_accounts_contents()
+    if tsmc_latest_price < 330:
+        push_price_notification()
+
+push_notification()
 
 @app.route("/charts", methods=['GET'])
 def show_charts():
