@@ -221,42 +221,40 @@ def handle_postback(event):
         line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif postback[:4] == '投資資訊':
         if postback[5:] == '股票':
-            stock_info_message = [
-                flex_message = FlexSendMessage(
-                    alt_text='hello',
-                    contents={
-                        "type": "bubble",
-                        "body": {
-                            "type": "box",
-                            "layout": "vertical",
-                            "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "Brown Store",
-                                    "weight": "bold",
-                                    "size": "lg",
-                                    "margin": "md"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "https://www.google.com.tw/",
-                                    "size": "xs",
-                                    "color": "#aaaaaa"
-                                },
-                                {
-                                    "type": "button",
-                                    "style": "link",
-                                    "action": {
-                                    "type": "uri",
-                                    "label": "https://www.google.com.tw/",
-                                    "uri": "https://www.google.com.tw/"
-                                    }
+            stock_info_message = FlexSendMessage(
+                alt_text='hello',
+                contents={
+                    "type": "bubble",
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "Brown Store",
+                                "weight": "bold",
+                                "size": "lg",
+                                "margin": "md"
+                            },
+                            {
+                                "type": "text",
+                                "text": "https://www.google.com.tw/",
+                                "size": "xs",
+                                "color": "#aaaaaa"
+                            },
+                            {
+                                "type": "button",
+                                "style": "link",
+                                "action": {
+                                "type": "uri",
+                                "label": "https://www.google.com.tw/",
+                                "uri": "https://www.google.com.tw/"
                                 }
-                            ]
-                        }
+                            }
+                        ]
                     }
-                )
-            ]
+                }
+            )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
 
 def push_price_notification():
