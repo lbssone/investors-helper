@@ -21,6 +21,8 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnDVZwwMPOzasdfsNPiGxCymwoNeQSTtx4HooAlKzvMftmHiUEUkbXAb3v1nYSjMGROkM3kNJqmtNA1nqAY5NgjVcXyiZJxUN2cAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 
+user_set = {}
+
 @app.route('/')
 def index():
     return "<p>Hello World!</p>"
@@ -51,6 +53,8 @@ def handle_message(event):
 
     profile = line_bot_api.get_profile(event.source.user_id)
     user_name = profile.display_name
+    user_name.add(event.source.user_id)
+    print(event.source.user_id)
     user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
     
     if user_input in hi_list:
@@ -73,7 +77,7 @@ def handle_message(event):
                 text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(latest_price),
                 actions=[
                     URIAction(
-                        label='前往app下單',
+                        label='前往app調整',
                         uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
                     ),
                     PostbackAction(
@@ -207,6 +211,9 @@ def handle_postback(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
+
+def push_accounts_contents():
+    line_bot_api.push_message()
 
 @app.route("/charts", methods=['GET'])
 def show_charts():
