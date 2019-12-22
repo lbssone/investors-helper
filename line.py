@@ -53,7 +53,7 @@ def handle_message(event):
 
     profile = line_bot_api.get_profile(event.source.user_id)
     user_name = profile.display_name
-    user_name.add(event.source.user_id)
+    user_set.add(event.source.user_id)
     print(event.source.user_id)
     user_input = event.message.text.lower().translate(str.maketrans('', '', ''.join(remove_list)))
     
