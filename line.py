@@ -45,7 +45,6 @@ def callback():
     # handle webhook body
     try:
         handler.handle(body, signature)
-        print('line-bot running...')
     except InvalidSignatureError:
         abort(400)
     return 'OK'
@@ -223,10 +222,14 @@ def handle_postback(event):
         line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif postback[:4] == '投資資訊':
         if postback[5:] == '股票':
-            stock_info_message = FlexSendMessage(
-                alt_text='hello',
-                contents=stock_messages
-            )
+            stock_info_message = []
+            for i in range(4):
+                stock_info_message.append(
+                    FlexSendMessage(
+                        alt_text='hello',
+                        contents=stock_messages[i]
+                    )
+                )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
 
 def push_price_notification():
@@ -279,3 +282,5 @@ def show_chart2():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
+    print('line-bot running...')    
+
