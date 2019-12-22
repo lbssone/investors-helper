@@ -219,6 +219,7 @@ def push_accounts_contents():
         TextSendMessage(text='Hello, world')
     ]
     line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=messages)
+push_accounts_contents()
 
 @app.route("/charts", methods=['GET'])
 def show_charts():
