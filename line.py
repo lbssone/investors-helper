@@ -97,27 +97,61 @@ def handle_message(event):
 
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif user_input == '投資資訊':
-        investment_info_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                text='請選擇欲查看之投資資訊',
-                actions=[
-                    URIAction(
-                        label="股票", 
-                        uri="https://www.cnyes.com/twstock/index.htm"
+        investment_info_message = TextSendMessage(
+            text='請選擇欲設定之項目',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="股票", 
+                            text="股票", 
+                            data="投資資訊:股票"
+                        ), 
+                        image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'
                     ),
-                    URIAction(
-                        label='基金',
-                        uri="https://fund.cnyes.com/"
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="基金", 
+                            text="基金",
+                            data="投資資訊:基金"
+
+                        ), 
+                        image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'
                     ),
-                    URIAction(
-                        label='外匯',
-                        uri="https://www.cnyes.com/forex/"
+                    QuickReplyButton(
+                        action=PostbackAction(
+                            label="外匯", 
+                            text="外匯",
+                            data="投資資訊:外匯"
+
+                        ),
+                        image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png'
                     )
                 ]
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
+        # investment_info_message = TemplateSendMessage(
+        #     alt_text='Buttons template',
+        #     template=ButtonsTemplate(
+        #         text='請選擇欲查看之投資資訊',
+        #         actions=[
+        #             URIAction(
+        #                 label="股票", 
+        #                 uri="https://www.cnyes.com/twstock/index.htm"
+        #             ),
+        #             URIAction(
+        #                 label='基金',
+        #                 uri="https://fund.cnyes.com/"
+        #             ),
+        #             URIAction(
+        #                 label='外匯',
+        #                 uri="https://www.cnyes.com/forex/"
+        #             )
+        #         ]
+        #     )
+        # )
+        # line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif user_input == '設定':
         Buttons_template = TemplateSendMessage(
             alt_text='Buttons template',
@@ -150,39 +184,7 @@ def handle_message(event):
 def handle_postback(event):
     postback = event.postback.data
     print('postback: '+postback)
-    if postback == '投資帳務列表':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://cdn2-www.dogtime.com/assets/uploads/2019/10/DogPopcorn1.jpg',
-                title='您的帳務資訊列表',
-                text='請選擇欲查看之帳務',
-                actions=[
-                    PostbackAction(
-                        label='股票',
-                        display_text='股票',
-                        data='股票:帳務'
-                    ),
-                    PostbackAction(
-                        label='基金',
-                        display_text='基金',
-                        data='基金:帳務'
-                    ),
-                    PostbackAction(
-                        label='外匯',
-                        display_text='外匯',
-                        data='外匯:帳務'
-                    ),
-                    PostbackAction(
-                        label='定存',
-                        display_text='定存',
-                        data='定存:帳務'
-                    ),
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    elif postback == '到價通知':
+    if postback == '到價通知':
         investment_info_message = TextSendMessage(
             text='請選擇欲設定之項目',
             quick_reply=QuickReply(
@@ -217,25 +219,64 @@ def handle_postback(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
+    elif postback[:4] == '投資資訊':
+        if postback[5:] == '股票':
+            stock_info_message = [
+                flex_message = FlexSendMessage(
+                    alt_text='hello',
+                    contents={
+                        "type": "bubble",
+                        "body": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Brown Store",
+                                    "weight": "bold",
+                                    "size": "lg",
+                                    "margin": "md"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "https://www.google.com.tw/",
+                                    "size": "xs",
+                                    "color": "#aaaaaa"
+                                },
+                                {
+                                    "type": "button",
+                                    "style": "link",
+                                    "action": {
+                                    "type": "uri",
+                                    "label": "https://www.google.com.tw/",
+                                    "uri": "https://www.google.com.tw/"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                )
+            ]
+            line_bot_api.reply_message(event.reply_token, stock_info_message)
 
 def push_price_notification():
     confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-                text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(latest_price),
-                actions=[
-                    URIAction(
-                        label='前往app調整',
-                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
-                    ),
-                    PostbackAction(
-                        label='更改通知價格',
-                        display_text='更改通知價格',
-                        data='更改通知價格'
-                    ),
-                ]
-            )
+        alt_text='Confirm template',
+        template=ConfirmTemplate(
+            text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(tsmc_latest_price),
+            actions=[
+                URIAction(
+                    label='前往app調整',
+                    uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
+                ),
+                PostbackAction(
+                    label='更改通知價格',
+                    display_text='更改通知價格',
+                    data='更改通知價格'
+                ),
+            ]
         )
+    )
     line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
 
 def push_accounts_contents():
