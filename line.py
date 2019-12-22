@@ -12,10 +12,12 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
+from src.news import stock_messages
+
 import twstock
 import schedule
-import time
-import datetime
+# import time
+# import datetime
 
 
 app = Flask(__name__)
@@ -223,51 +225,7 @@ def handle_postback(event):
         if postback[5:] == '股票':
             stock_info_message = FlexSendMessage(
                 alt_text='hello',
-                contents={
-                    "type": "bubble",
-                    "styles": {
-                        "footer": {
-                        "separator": True
-                        }
-                    },
-                    "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "台股盤後—台積電疲弱半導體族群成災區 失守「萬二」大關",
-                                "weight": "bold",
-                                "size": "md",
-                                "margin": "md",
-                                "wrap": True
-                            },
-                            {
-                                "type": "text",
-                                "text": "台股今 (20) 日在蘋概三王、半導體族群走弱下，下跌 59.82 點或 0.5%、收 11959.08 點，跌破萬二大關，成交金額 1687 億元。...",
-                                "size": "xs",
-                                "margin": "sm",
-                                "color": "#aaaaaa",
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "height": "sm",
-                                "action": {
-                                    "type": "uri",
-                                    "label": "查看新聞",
-                                    "uri": "https://linecorp.com"
-                                }
-                            }
-                        ]
-                    }
-                }
+                contents=stock_messages
             )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
 
