@@ -12,7 +12,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
-from twstock import *
+import twstock
 import time
 import datetime
 
