@@ -13,6 +13,7 @@ from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
 import twstock
+import datetime
 
 
 app = Flask(__name__)
