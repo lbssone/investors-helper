@@ -252,7 +252,7 @@ def handle_postback(event):
                         "contents": [
                             {
                                 "type": "button",
-                                "style": "link",
+                                "height": "sm",
                                 "action": {
                                     "type": "uri",
                                     "label": "查看新聞",
