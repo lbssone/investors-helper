@@ -238,7 +238,7 @@ def push_accounts_contents():
         line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
     while latest_price < 330:
         notify_price()
-        time.sleep(30)
+        time.sleep(10)
 push_accounts_contents()
 
 @app.route("/charts", methods=['GET'])
