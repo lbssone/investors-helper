@@ -213,12 +213,27 @@ def handle_postback(event):
         line_bot_api.reply_message(event.reply_token, investment_info_message)
 
 def push_accounts_contents():
-    messages = [
-        TextSendMessage(text='Hello, world'),
-        TextSendMessage(text='Hello, world'),
-        TextSendMessage(text='Hello, world')
-    ]
-    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=messages)
+    tsmc = twstock.realtime.get('2330')
+    latest_price = float(tsmc['realtime']['latest_trade_price'])
+    confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+                text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(latest_price),
+                actions=[
+                    URIAction(
+                        label='前往app調整',
+                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
+                    ),
+                    PostbackAction(
+                        label='更改通知價格',
+                        display_text='更改通知價格',
+                        data='更改通知價格'
+                    ),
+                ]
+            )
+        )
+    if latest_price < 330:
+        line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
 push_accounts_contents()
 
 @app.route("/charts", methods=['GET'])
