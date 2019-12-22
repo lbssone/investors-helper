@@ -231,24 +231,32 @@ def handle_postback(event):
                         "contents": [
                             {
                                 "type": "text",
-                                "text": "Brown Store",
+                                "text": "台股盤後—台積電疲弱半導體族群成災區 失守「萬二」大關",
                                 "weight": "bold",
-                                "size": "lg",
-                                "margin": "md"
+                                "size": "md",
+                                "margin": "md",
+                                "wrap": true
                             },
                             {
                                 "type": "text",
-                                "text": "https://www.google.com.tw/",
+                                "text": "台股今 (20) 日在蘋概三王、半導體族群走弱下，下跌 59.82 點或 0.5%、收 11959.08 點，跌破萬二大關，成交金額 1687 億元。...",
                                 "size": "xs",
-                                "color": "#aaaaaa"
-                            },
+                                "color": "#aaaaaa",
+                                "wrap": true
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
                             {
                                 "type": "button",
                                 "style": "link",
                                 "action": {
                                 "type": "uri",
-                                "label": "https://www.google.com.tw/",
-                                "uri": "https://www.google.com.tw/"
+                                "label": "查看新聞",
+                                "uri": "https://linecorp.com"
                                 }
                             }
                         ]
