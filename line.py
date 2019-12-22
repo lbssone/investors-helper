@@ -286,10 +286,10 @@ def push_accounts_contents():
 
 def push_notification():
     global tsmc_latest_price
-    schedule.every().day.at("17:22").do(push_accounts_contents)
-    while True:
-        schedule.run_pending()
-        time.sleep(10)
+    # schedule.every().day.at("17:22").do(push_accounts_contents)
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(10)
     if tsmc_latest_price < 330:
         push_price_notification()
 
