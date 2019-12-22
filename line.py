@@ -21,7 +21,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnDVZwwMPOzasdfsNPiGxCymwoNeQSTtx4HooAlKzvMftmHiUEUkbXAb3v1nYSjMGROkM3kNJqmtNA1nqAY5NgjVcXyiZJxUN2cAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 
-user_set = {}
+user_set = set()
 
 @app.route('/')
 def index():
