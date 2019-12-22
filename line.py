@@ -98,7 +98,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif user_input == '投資資訊':
         investment_info_message = TextSendMessage(
-            text='請選擇欲設定之項目',
+            text='請選擇欲查看的投資項目',
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(
@@ -235,14 +235,14 @@ def handle_postback(event):
                                 "weight": "bold",
                                 "size": "md",
                                 "margin": "md",
-                                "wrap": true
+                                "wrap": True
                             },
                             {
                                 "type": "text",
                                 "text": "台股今 (20) 日在蘋概三王、半導體族群走弱下，下跌 59.82 點或 0.5%、收 11959.08 點，跌破萬二大關，成交金額 1687 億元。...",
                                 "size": "xs",
                                 "color": "#aaaaaa",
-                                "wrap": true
+                                "wrap": True
                             }
                         ]
                     },
@@ -254,9 +254,9 @@ def handle_postback(event):
                                 "type": "button",
                                 "style": "link",
                                 "action": {
-                                "type": "uri",
-                                "label": "查看新聞",
-                                "uri": "https://linecorp.com"
+                                    "type": "uri",
+                                    "label": "查看新聞",
+                                    "uri": "https://linecorp.com"
                                 }
                             }
                         ]
