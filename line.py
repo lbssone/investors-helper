@@ -225,6 +225,11 @@ def handle_postback(event):
                 alt_text='hello',
                 contents={
                     "type": "bubble",
+                    "styles": {
+                        "footer": {
+                        "separator": True
+                        }
+                    },
                     "body": {
                         "type": "box",
                         "layout": "vertical",
@@ -241,6 +246,7 @@ def handle_postback(event):
                                 "type": "text",
                                 "text": "台股今 (20) 日在蘋概三王、半導體族群走弱下，下跌 59.82 點或 0.5%、收 11959.08 點，跌破萬二大關，成交金額 1687 億元。...",
                                 "size": "xs",
+                                "margin": "sm",
                                 "color": "#aaaaaa",
                                 "wrap": True
                             }
