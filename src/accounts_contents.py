@@ -827,7 +827,7 @@ accounts_contents = {
                                 },
                                 {
                                     "type": "text",
-                                    "text": "持有總額",
+                                    "text": "持有金額",
                                     "size": "sm",
                                     "color": "#111111",
                                     "align": "center"
@@ -844,7 +844,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "vertical",
-                                "margin": "xl",
+                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "box",
@@ -894,7 +894,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "vertical",
-                                "margin": "xl",
+                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "box",
@@ -944,7 +944,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "vertical",
-                                "margin": "xl",
+                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "box",
@@ -1036,184 +1036,155 @@ accounts_contents = {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
+                {
+                    "type": "text",
+                    "text": "【其他】資產總覽",
+                    "weight": "bold",
+                    "size": "xl",
+                    "margin": "md"
+                },
+                {
+                    "type": "text",
+                    "text": "today",
+                    "size": "xs",
+                    "color": "#aaaaaa",
+                    "wrap": true
+                },
+                {
+                    "type": "separator",
+                    "margin": "md"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "xxl",
+                    "spacing": "sm",
+                    "contents": [
                     {
                         "type": "text",
-                        "text": "【其他】資產總覽",
+                        "text": "定存",
                         "weight": "bold",
-                        "size": "xl",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "text",
-                        "text": today,
-                        "size": "xs",
-                        "color": "#aaaaaa",
-                        "wrap": True
-                    },
-                    {
-                        "type": "separator",
+                        "size": "md",
                         "margin": "md"
                     },
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "xxl",
+                        "margin": "md",
                         "spacing": "sm",
                         "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
                             {
                                 "type": "text",
-                                "text": "定存",
-                                "weight": "bold",
-                                "size": "md",
-                                "margin": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Energy Drink",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$2.99",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Chewing Gum",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.99",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "Bottled Water",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$3.33",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
+                                "text": "(台新銀行)",
+                                "size": "sm",
+                                "align": "start"
                             },
                             {
                                 "type": "text",
-                                "text": "保險",
-                                "weight": "bold",
-                                "size": "md",
-                                "margin": "xxl"
+                                "text": "金額",
+                                "size": "sm",
+                                "align": "center"
                             },
                             {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "ITEMS",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "3",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "TOTAL",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$7.31",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CASH",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$8.0",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CHANGE",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.69",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
+                                "type": "text",
+                                "text": "到期日",
+                                "size": "sm",
+                                "align": "end"
                             }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "三年期",
+                                "size": "sm",
+                                "color": "#555555",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "80,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "2020.12.31",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "一年期",
+                                "size": "sm",
+                                "color": "#555555",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "20,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "2020.12.31",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "總計",
+                                "size": "sm",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "100,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "weight": "bold",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "         ",
+                                "size": "sm",
+                                "color": "#111111",
+                                "weight": "bold",
+                                "align": "end"
+                            }
+                            ]
+                        }
                         ]
                     },
                     {
@@ -1221,26 +1192,105 @@ accounts_contents = {
                         "margin": "xxl"
                     },
                     {
+                        "type": "text",
+                        "text": "保險",
+                        "weight": "bold",
+                        "size": "md",
+                        "margin": "xxl"
+                    },
+                    {
                         "type": "box",
-                        "layout": "horizontal",
+                        "layout": "vertical",
                         "margin": "md",
+                        "spacing": "sm",
                         "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
                             {
                                 "type": "text",
-                                "text": "PAYMENT ID",
-                                "size": "xs",
-                                "color": "#aaaaaa",
-                                "flex": 0
+                                "text": "(新光人壽)",
+                                "size": "sm",
+                                "align": "start"
                             },
                             {
                                 "type": "text",
-                                "text": "#743289384279",
-                                "color": "#aaaaaa",
-                                "size": "xs",
+                                "text": "金額",
+                                "size": "sm",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "到期日",
+                                "size": "sm",
                                 "align": "end"
                             }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "五動鑫富",
+                                "size": "sm",
+                                "color": "#555555",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "30,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "2025.12.31",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "margin": "md",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "總計",
+                                "size": "sm",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "30,000",
+                                "size": "sm",
+                                "color": "#111111",
+                                "weight": "bold",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  ",
+                                "size": "sm",
+                                "color": "#111111",
+                                "weight": "bold",
+                                "align": "end"
+                            }
+                            ]
+                        }
                         ]
                     }
+                    ]
+                }
                 ]
             },
             "footer": {
