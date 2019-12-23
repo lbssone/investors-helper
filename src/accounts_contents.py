@@ -862,7 +862,7 @@ accounts_contents = {
                                         {
                                             "type": "text",
                                             "text": "￥83,356",
-                                            "size": "xs",
+                                            "size": "sm",
                                             "color": "#111111",
                                             "align": "center"
                                         },
@@ -891,22 +891,36 @@ accounts_contents = {
                                 "contents": [
                                 {
                                     "type": "text",
-                                    "text": "基金",
-                                    "size": "md",
+                                    "text": "美金",
+                                    "size": "sm",
                                     "color": "#555555",
                                     "weight": "bold",
                                     "align": "start"
                                 },
                                 {
-                                    "type": "text",
-                                    "text": "30,000",
-                                    "size": "md",
-                                    "color": "#111111",
-                                    "align": "center"
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "margin": "md",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "$144",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "(NTD 4,339)",
+                                            "size": "xxs",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                    ]
                                 },
                                 {
                                     "type": "text",
-                                    "text": "(+0.5%)",
+                                    "text": "(+1.99%)",
                                     "size": "sm",
                                     "color": "#eb0505",
                                     "align": "end"
@@ -918,30 +932,44 @@ accounts_contents = {
                                 "layout": "horizontal",
                                 "margin": "md",
                                 "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "外匯",
-                                        "size": "md",
-                                        "color": "#555555",
-                                        "weight": "bold",
-                                        "align": "start"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "30,000",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "(+0.5%)",
-                                        "size": "sm",
-                                        "color": "#eb0505",
-                                        "align": "end"
-                                    }
+                                {
+                                    "type": "text",
+                                    "text": "歐元",
+                                    "size": "sm",
+                                    "color": "#555555",
+                                    "weight": "bold",
+                                    "align": "start"
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "margin": "md",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "€344",
+                                            "size": "sm",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "(NTD 11,472)",
+                                            "size": "xxs",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                    ]
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "(-1.03%)",
+                                    "size": "sm",
+                                    "color": "#eb0505",
+                                    "align": "end"
+                                }
                                 ]
-                            }
+                            },
                         ]
                     }
                 ]
