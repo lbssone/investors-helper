@@ -178,6 +178,7 @@ accounts_contents = {
                                             {
                                                 "type": "text",
                                                 "text": "NTD 110,000",
+                                                "weight": "bold",
                                                 "size": "md",
                                                 "align": "end"
                                             }
@@ -200,6 +201,7 @@ accounts_contents = {
                                             {
                                                 "type": "text",
                                                 "text": "+5%",
+                                                "weight": "bold",
                                                 "size": "md",
                                                 "color": "#eb0505",
                                                 "align": "end"
@@ -230,7 +232,7 @@ accounts_contents = {
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "投入成本",
+                                                        "text": "投入成本(NTD)",
                                                         "size": "sm",
                                                         "align": "end"
                                                     }
@@ -251,7 +253,7 @@ accounts_contents = {
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "NTD 100,000",
+                                                        "text": "100,000",
                                                         "size": "sm",
                                                         "color": "#111111",
                                                         "align": "end"
@@ -273,7 +275,7 @@ accounts_contents = {
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "NTD 30,000",
+                                                        "text": "30,000",
                                                         "size": "sm",
                                                         "color": "#111111",
                                                         "align": "end"
@@ -297,6 +299,7 @@ accounts_contents = {
                                                     {
                                                         "type": "text",
                                                         "text": "NTD 130,000",
+                                                        "weight": "bold",
                                                         "size": "md",
                                                         "align": "end"
                                                     }
@@ -382,6 +385,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "NTD 110,000",
+                                        "weight": "bold",
                                         "size": "md",
                                         "align": "end"
                                     }
@@ -408,6 +412,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "+5%",
+                                        "weight": "bold",
                                         "size": "md",
                                         "color": "#eb0505",
                                         "align": "end"
