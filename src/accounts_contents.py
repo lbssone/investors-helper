@@ -78,6 +78,7 @@ accounts_contents = {
                         {
                             "type": "box",
                             "layout": "horizontal",
+                            "margin": "md",
                             "contents": [
                             {
                                 "type": "text",
@@ -106,6 +107,7 @@ accounts_contents = {
                         {
                             "type": "box",
                             "layout": "horizontal",
+                            "margin": "md",
                             "contents": [
                             {
                                 "type": "text",
@@ -134,11 +136,12 @@ accounts_contents = {
                         {
                             "type": "box",
                             "layout": "horizontal",
+                            "margin": "md",
                             "contents": [
                             {
                                 "type": "text",
                                 "text": "外匯",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#555555",
                                 "weight": "bold",
                                 "align": "start"
