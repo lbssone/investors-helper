@@ -1,54 +1,6 @@
 stock_messages = [
     {
         "type": "bubble",
-        "body": {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-            {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip3.jpg",
-                "size": "full",
-                "aspectMode": "cover",
-                "aspectRatio": "1:1",
-                "gravity": "center"
-            },
-            {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": "台股盤後—台積電疲弱半導體族群成災區 失守「萬二」大關",
-                            "size": "xl",
-                            "color": "#ffffff"
-                        }
-                        ]
-                    }
-                    ],
-                    "spacing": "xs"
-                }
-                ],
-                "position": "absolute",
-                "offsetBottom": "0px",
-                "offsetStart": "0px",
-                "offsetEnd": "0px",
-                "paddingAll": "20px"
-            }
-            ],
-            "paddingAll": "0px"
-        }
-    },
-    {
-        "type": "bubble",
         "styles": {
             "footer": {
             "separator": True
