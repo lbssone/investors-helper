@@ -363,6 +363,14 @@ accounts_contents = {
                         "margin": "md"
                     },
                     {
+                        "type": "text",
+                        "text": "投資標的",
+                        "weight": "bold",
+                        "size": "md",
+                        "color": "#215c80",
+                        "margin": "md"
+                    },
+                    {
                         "type": "box",
                         "layout": "vertical",
                         "margin": "xxl",
@@ -506,10 +514,6 @@ accounts_contents = {
                                         "align": "end"
                                     }
                                 ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl",
                             },
                             {
                                 "type": "box",
