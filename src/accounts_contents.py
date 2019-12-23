@@ -166,6 +166,44 @@ accounts_contents = {
                             ]
                         },
                         {
+                            "type": "separator",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                            {
+                                "type": "text",
+                                "text": "總計",
+                                "size": "md",
+                                "color": "#555555",
+                                "weight": "bold",
+                                "align": "start"
+                            },
+                            {
+                                "type": "text",
+                                "text": "110,000",
+                                "size": "md",
+                                "color": "#111111",
+                                "weight": "bold",
+                                "align": "center"
+                            },
+                            {
+                                "type": "text",
+                                "text": "(+0.5%)",
+                                "size": "sm",
+                                "color": "#eb0505",
+                                "weight": "bold",
+                                "align": "end"
+                            }
+                            ]
+                        },
+                        {
+                            "type": "separator",
+                            "margin": "xxl"
+                        },
+                        {
                             "type": "box",
                             "layout": "horizontal",
                             "contents": [
