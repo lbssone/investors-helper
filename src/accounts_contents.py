@@ -83,14 +83,14 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "50,000",
+                                        "text": "17,000",
                                         "size": "md",
                                         "color": "#111111",
                                         "align": "center"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "+5%",
+                                        "text": "+8%",
                                         "size": "sm",
                                         "color": "#eb0505",
                                         "align": "end"
@@ -112,14 +112,14 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "30,000",
+                                        "text": "13,000",
                                         "size": "md",
                                         "color": "#111111",
                                         "align": "center"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "+5%",
+                                        "text": "+2.54%",
                                         "size": "sm",
                                         "color": "#eb0505",
                                         "align": "end"
@@ -141,16 +141,16 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "30,000",
+                                        "text": "5,000",
                                         "size": "md",
                                         "color": "#111111",
                                         "align": "center"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "+5%",
+                                        "text": "-2.03%",
                                         "size": "sm",
-                                        "color": "#eb0505",
+                                        "color": "#00b01b",
                                         "align": "end"
                                     }
                                 ]

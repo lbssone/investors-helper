@@ -75,17 +75,32 @@ def handle_message(event):
 
         line_bot_api.reply_message(event.reply_token, flex_message)
         
-    elif user_input == '到價':
+    elif user_input == '股票到價':
         tsmc = twstock.realtime.get('2330')
         latest_price = tsmc['realtime']['latest_trade_price']
         buttons_template_message = TemplateSendMessage(
             alt_text='Confirm template',
-            template=ButtonTemplate(
+            template=ButtonsTemplate(
                 text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(latest_price),
                 actions=[
                     URIAction(
                         label='前往app操作',
                         uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
+                    ),
+                ]
+            )
+        )
+
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    elif user_input == '基金到價':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ButtonsTemplate(
+                text='【到價通知】\n安聯收益成長基金-AM穩定月收類股(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
+                actions=[
+                    URIAction(
+                        label='前往app操作',
+                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=206%3A240&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo'
                     ),
                 ]
             )
@@ -127,27 +142,6 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
-        # investment_info_message = TemplateSendMessage(
-        #     alt_text='Buttons template',
-        #     template=ButtonsTemplate(
-        #         text='請選擇欲查看之投資資訊',
-        #         actions=[
-        #             URIAction(
-        #                 label="股票", 
-        #                 uri="https://www.cnyes.com/twstock/index.htm"
-        #             ),
-        #             URIAction(
-        #                 label='基金',
-        #                 uri="https://fund.cnyes.com/"
-        #             ),
-        #             URIAction(
-        #                 label='外匯',
-        #                 uri="https://www.cnyes.com/forex/"
-        #             )
-        #         ]
-        #     )
-        # )
-        # line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif user_input == '設定':
         Buttons_template = TemplateSendMessage(
             alt_text='Buttons template',
