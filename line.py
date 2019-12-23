@@ -30,7 +30,7 @@ user_set = set()
 foxconn = twstock.realtime.get('2317')
 foxconn_latest_price = float(foxconn['realtime']['latest_trade_price'])
 tsmc = twstock.realtime.get('2330')
-tsmc_latest_price = float(foxconn['realtime']['latest_trade_price'])
+tsmc_latest_price = float(tsmc['realtime']['latest_trade_price'])
 
 @app.route('/')
 def index():
@@ -245,7 +245,6 @@ def push_accounts_contents():
     line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=flex_message)
 
 def push_notification():
-    global tsmc_latest_price
     # schedule.every().day.at("17:22").do(push_accounts_contents)
     # while True:
     #     schedule.run_pending()
