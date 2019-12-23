@@ -365,13 +365,12 @@ accounts_contents = {
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "md",
+                        "margin": "xxl",
                         "spacing": "sm",
                         "contents": [
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "text",
