@@ -368,12 +368,12 @@ accounts_contents = {
                         "weight": "bold",
                         "size": "md",
                         "color": "#215c80",
-                        "margin": "md"
+                        "margin": "xl"
                     },
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "xxl",
+                        "margin": "md",
                         "spacing": "sm",
                         "contents": [
                             {
