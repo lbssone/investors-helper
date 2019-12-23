@@ -1048,7 +1048,7 @@ accounts_contents = {
                     "text": "today",
                     "size": "xs",
                     "color": "#aaaaaa",
-                    "wrap": true
+                    "wrap": True
                 },
                 {
                     "type": "separator",
