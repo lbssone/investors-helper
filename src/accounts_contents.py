@@ -453,38 +453,28 @@ accounts_contents = {
                             },
                             {
                                 "type": "box",
-                                "layout": "vertical",
-                                "margin": "xxl",
+                                "layout": "horizontal",
                                 "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "總現值",
-                                    "weight": "bold",
-                                    "size": "lg",
-                                    "color": "#215c80",
-                                    "margin": "md"
-                                },
-                                {
-                                    "type": "box",
-                                    "layout": "horizontal",
-                                    "spacing": "sm",
-                                    "contents": [
                                     {
                                         "type": "text",
-                                        "text": "NTD",
-                                        "size": "md",
-                                        "flex": 0
+                                        "text": "總現值",
+                                        "weight": "bold",
+                                        "size": "lg",
+                                        "color": "#215c80",
+                                        "margin": "md"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "110,000",
+                                        "text": "NTD 110,000",
                                         "size": "md",
                                         "align": "end"
                                     }
-                                    ]
-                                }
                                 ]
+                            },
+                            {
+                                "type": "separator",
+                                "margin": "xxl",
                             },
                             {
                                 "type": "box",
