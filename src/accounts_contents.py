@@ -346,7 +346,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "總現值",
                                         "weight": "bold",
-                                        "size": "lg",
+                                        "size": "md",
                                         "color": "#215c80",
                                         "margin": "md"
                                     },
@@ -372,7 +372,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "總報酬率",
                                         "weight": "bold",
-                                        "size": "lg",
+                                        "size": "md",
                                         "color": "#215c80",
                                         "margin": "md"
                                     },
@@ -386,8 +386,13 @@ accounts_contents = {
                                 ]
                             },
                             {
+                                "type": "separator",
+                                "margin": "xxl",
+                            },
+                            {
                                 "type": "box",
                                 "layout": "horizontal",
+                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "text",
