@@ -413,7 +413,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "(0.00%)",
                                         "size": "sm",
-                                        "color": "##8f8f8f",
+                                        "color": "#8f8f8f",
                                         "align": "end"
                                     }
                                 ]
