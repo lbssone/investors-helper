@@ -64,10 +64,11 @@ accounts_contents = {
                                         "text": "NTD 50,000",
                                         "size": "sm",
                                         "color": "#111111",
+                                        "align": "end"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "0.5%",
+                                        "text": "(+0.5%)",
                                         "size": "sm",
                                         "color": "#eb0505",
                                         "align": "end"
