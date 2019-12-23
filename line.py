@@ -78,9 +78,9 @@ def handle_message(event):
     elif user_input == '到價':
         tsmc = twstock.realtime.get('2330')
         latest_price = tsmc['realtime']['latest_trade_price']
-        confirm_template_message = TemplateSendMessage(
+        buttons_template_message = TemplateSendMessage(
             alt_text='Confirm template',
-            template=ConfirmTemplate(
+            template=ButtonTemplate(
                 text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(latest_price),
                 actions=[
                     URIAction(
@@ -91,7 +91,7 @@ def handle_message(event):
             )
         )
 
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif user_input == '投資資訊':
         investment_info_message = TextSendMessage(
             text='請選擇欲查看的投資項目',
@@ -228,9 +228,9 @@ def handle_postback(event):
             line_bot_api.reply_message(event.reply_token, stock_info_message)
 
 def push_price_notification():
-    confirm_template_message = TemplateSendMessage(
+    Buttons_template_message = TemplateSendMessage(
         alt_text='Confirm template',
-        template=ConfirmTemplate(
+        template=ButtonsTemplate(
             text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(tsmc_latest_price),
             actions=[
                 URIAction(
@@ -241,7 +241,7 @@ def push_price_notification():
         )
     )
     # line_bot_api.broadcast(confirm_template_message)
-    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
+    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=Buttons_template_message)
 
 def push_accounts_contents():
     flex_message = FlexSendMessage(
