@@ -849,7 +849,7 @@ accounts_contents = {
                                 {
                                     "type": "text",
                                     "text": "日幣",
-                                    "size": "md",
+                                    "size": "sm",
                                     "color": "#555555",
                                     "weight": "bold",
                                     "align": "start"
@@ -861,15 +861,15 @@ accounts_contents = {
                                     "contents": [
                                         {
                                             "type": "text",
-                                            "text": "￥83,356(JPY)",
+                                            "text": "￥83,356",
                                             "size": "xs",
                                             "color": "#111111",
                                             "align": "center"
                                         },
                                         {
                                             "type": "text",
-                                            "text": "NTD 22,865",
-                                            "size": "xs",
+                                            "text": "(NTD 22,865)",
+                                            "size": "xxs",
                                             "color": "#111111",
                                             "align": "center"
                                         },
