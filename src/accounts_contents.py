@@ -852,7 +852,7 @@ accounts_contents = {
                                         {
                                             "type": "text",
                                             "text": "日幣",
-                                            "size": "sm",
+                                            "size": "md",
                                             "color": "#555555",
                                             "weight": "bold",
                                             "align": "start"
@@ -861,7 +861,7 @@ accounts_contents = {
                                         {
                                             "type": "text",
                                             "text": "￥83,356",
-                                            "size": "sm",
+                                            "size": "md",
                                             "color": "#111111",
                                             "weight": "bold",
                                             "align": "center"
