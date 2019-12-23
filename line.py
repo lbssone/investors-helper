@@ -225,7 +225,7 @@ def push_price_notification():
     Buttons_template_message = TemplateSendMessage(
         alt_text='Confirm template',
         template=ButtonsTemplate(
-            text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(tsmc_latest_price),
+            text='【到價通知】\n鴻海目前的股價為{}，已達設定之賣出價格'.format(foxconn_latest_price),
             actions=[
                 URIAction(
                     label='前往app操作',
@@ -234,8 +234,20 @@ def push_price_notification():
             ]
         )
     )
+    buttons_template_message = TemplateSendMessage(
+        alt_text='Confirm template',
+        template=ButtonsTemplate(
+            text='【到價通知】\n安聯收益成長基金-AM穩定月收類股(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
+            actions=[
+                URIAction(
+                    label='前往app操作',
+                    uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=206%3A240&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo'
+                ),
+            ]
+        )
+    )
     # line_bot_api.broadcast(confirm_template_message)
-    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=Buttons_template_message)
+    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=[Buttons_template_message, buttons_template_message])
 
 def push_accounts_contents():
     flex_message = FlexSendMessage(
