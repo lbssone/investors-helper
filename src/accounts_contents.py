@@ -225,7 +225,7 @@ accounts_contents = {
                                                         "text": "  ",
                                                         "size": "md",
                                                         "color": "#555555",
-                                                        "weight": "bold"
+                                                        "weight": "bold",
                                                         "flex": 0
                                                     },
                                                     {
@@ -246,7 +246,7 @@ accounts_contents = {
                                                         "text": "定存",
                                                         "size": "md",
                                                         "color": "#555555",
-                                                        "weight": "bold"
+                                                        "weight": "bold",
                                                         "flex": 0
                                                     },
                                                     {
