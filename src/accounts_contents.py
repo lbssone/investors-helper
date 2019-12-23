@@ -778,17 +778,6 @@ accounts_contents = {
                 "contents": [
                     {
                         "type": "button",
-                        "style": "primary",
-                        "color": "#f2aa5c",
-                        "height": "sm",
-                        "action": {
-                            "type": "uri",
-                            "label": "查看圖表",
-                            "uri": "https://fintech-salon-wealth-tracker.herokuapp.com/chart2"
-                        }
-                    },
-                    {
-                        "type": "button",
                         "style": "secondary",
                         "height": "sm",
                         "action": {
