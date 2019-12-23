@@ -38,7 +38,7 @@ stock_messages = [
                     "action": {
                         "type": "uri",
                         "label": "查看新聞",
-                        "uri": "https://linecorp.com"
+                        "uri": "https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=22%3A14&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo"
                     }
                 }
             ]
@@ -83,7 +83,7 @@ stock_messages = [
                     "action": {
                         "type": "uri",
                         "label": "查看新聞",
-                        "uri": "https://linecorp.com"
+                        "uri": "https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=22%3A14&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo"
                     }
                 }
             ]
@@ -128,7 +128,7 @@ stock_messages = [
                     "action": {
                         "type": "uri",
                         "label": "查看新聞",
-                        "uri": "https://linecorp.com"
+                        "uri": "https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=22%3A14&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo"
                     }
                 }
             ]
@@ -173,7 +173,7 @@ stock_messages = [
                     "action": {
                         "type": "uri",
                         "label": "查看新聞",
-                        "uri": "https://linecorp.com"
+                        "uri": "https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=22%3A14&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo"
                     }
                 }
             ]

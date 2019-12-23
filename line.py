@@ -27,8 +27,8 @@ line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnD
 handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 
 user_set = set()
-tsmc = twstock.realtime.get('2330')
-tsmc_latest_price = float(tsmc['realtime']['latest_trade_price'])
+foxconn = twstock.realtime.get('2317')
+foxconn_latest_price = float(foxconn['realtime']['latest_trade_price'])
 
 @app.route('/')
 def index():
@@ -76,12 +76,10 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, flex_message)
         
     elif user_input == '股票到價':
-        tsmc = twstock.realtime.get('2330')
-        latest_price = tsmc['realtime']['latest_trade_price']
         buttons_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ButtonsTemplate(
-                text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(latest_price),
+                text='【到價通知】\n鴻海目前的股價為{}，已達設定之賣出價格'.format(foxconn_latest_price),
                 actions=[
                     URIAction(
                         label='前往app操作',
