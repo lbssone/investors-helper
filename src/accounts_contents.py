@@ -344,21 +344,18 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "   ",
                                         "size": "sm",
-                                        "color": "#555555",
                                         "align": "start"
                                     },
                                     {
                                         "type": "text",
                                         "text": "現值(NTD)",
                                         "size": "sm",
-                                        "color": "#111111",
                                         "align": "center"
                                     },
                                     {
                                         "type": "text",
                                         "text": "報酬率",
                                         "size": "sm",
-                                        "color": "#111111",
                                         "align": "end"
                                     }
                                 ]
