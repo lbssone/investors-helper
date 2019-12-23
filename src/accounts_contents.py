@@ -62,14 +62,14 @@ accounts_contents = {
                             {
                                 "type": "text",
                                 "text": "現值(NTD)",
-                                "size": "md",
+                                "size": "sm",
                                 "color": "#111111",
                                 "align": "center"
                             },
                             {
                                 "type": "text",
                                 "text": "報酬率",
-                                "size": "md",
+                                "size": "sm",
                                 "color": "#111111",
                                 "align": "end"
                             }
@@ -97,7 +97,7 @@ accounts_contents = {
                             {
                                 "type": "text",
                                 "text": "(+0.5%)",
-                                "size": "md",
+                                "size": "sm",
                                 "color": "#eb0505",
                                 "align": "end"
                             }
@@ -110,14 +110,15 @@ accounts_contents = {
                             {
                                 "type": "text",
                                 "text": "基金",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#555555",
+                                "weight": "bold",
                                 "align": "start"
                             },
                             {
                                 "type": "text",
                                 "text": "30,000",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#111111",
                                 "align": "center"
                             },
@@ -139,12 +140,13 @@ accounts_contents = {
                                 "text": "外匯",
                                 "size": "sm",
                                 "color": "#555555",
+                                "weight": "bold",
                                 "align": "start"
                             },
                             {
                                 "type": "text",
                                 "text": "30,000",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#111111",
                                 "align": "center"
                             },
