@@ -177,7 +177,7 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "NTD 110,000",
+                                                "text": "NTD 35,000",
                                                 "weight": "bold",
                                                 "size": "md",
                                                 "align": "end"
@@ -384,7 +384,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "NTD 110,000",
+                                        "text": "NTD 17,000",
                                         "weight": "bold",
                                         "size": "md",
                                         "align": "end"
@@ -492,7 +492,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "4,300",
+                                        "text": "3,021",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "center"
@@ -521,7 +521,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "4,300",
+                                        "text": "4,047",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "center"
@@ -617,7 +617,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "+28(+0.47%)",
+                                        "text": "+98(+1.63%)",
                                         "size": "sm",
                                         "weight": "bold",
                                         "color": "#eb0505",
@@ -638,10 +638,10 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "-8(-0.13%)",
+                                        "text": "+62(+1.03%)",
                                         "size": "sm",
                                         "weight": "bold",
-                                        "color": "#00b01b",
+                                        "color": "#eb0505",
                                         "align": "end"
                                     }
                                 ]
@@ -674,13 +674,13 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "TWD",
+                                        "text": "NTD",
                                         "size": "sm",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "10,000",
+                                        "text": "12,938",
                                         "size": "sm",
                                         "align": "end"
                                     }
@@ -714,13 +714,13 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "TWD",
+                                        "text": "NTD",
                                         "size": "sm",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "10,000",
+                                        "text": "13,000",
                                         "size": "sm",
                                         "align": "end"
                                     }
@@ -755,13 +755,13 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "TWD",
+                                        "text": "NTD",
                                         "size": "sm",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
-                                        "text": "50",
+                                        "text": "36",
                                         "size": "sm",
                                         "align": "end"
                                     }
