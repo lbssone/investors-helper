@@ -942,8 +942,9 @@ accounts_contents = {
                             }
                             ]
                         },
-                    ]
-                },
+                    }
+                ]
+            },
             "footer": {
                 "type": "box",
                 "layout": "vertical",
