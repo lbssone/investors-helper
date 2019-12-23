@@ -422,7 +422,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "鴻海",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
                                         "align": "start"
@@ -430,7 +430,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "9,932",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#111111",
                                         "align": "center"
                                     },
@@ -451,7 +451,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "台泥",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
                                         "align": "start"
@@ -459,7 +459,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "4,300",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#111111",
                                         "align": "center"
                                     },
@@ -480,7 +480,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "元大台灣50",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
                                         "align": "start"
@@ -488,7 +488,7 @@ accounts_contents = {
                                     {
                                         "type": "text",
                                         "text": "4,300",
-                                        "size": "md",
+                                        "size": "sm",
                                         "color": "#111111",
                                         "align": "center"
                                     },
