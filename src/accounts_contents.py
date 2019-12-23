@@ -549,10 +549,9 @@ accounts_contents = {
                         "style": "secondary",
                         "height": "sm",
                         "action": {
-                            "type": "postback",
+                            "type": "uri",
                             "label": "詳細資訊",
-                            "text": "詳細資訊",
-                            "data": "詳細資訊:股票"
+                            "uri": "https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=2%3A197&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo"
                         }
                     }
                 ]
