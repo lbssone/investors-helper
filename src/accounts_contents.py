@@ -449,33 +449,61 @@ accounts_contents = {
                             },
                             {
                                 "type": "separator",
-                                "margin": "md"
+                                "margin": "xxl"
                             },
                             {
                                 "type": "box",
-                                "layout": "horizontal",
+                                "layout": "vertical",
+                                "margin": "xxl",
+                                "spacing": "sm",
                                 "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "總現值",
+                                    "weight": "bold",
+                                    "size": "lg",
+                                    "color": "#215c80",
+                                    "margin": "md"
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "horizontal",
+                                    "spacing": "sm",
+                                    "contents": [
                                     {
                                         "type": "text",
-                                        "text": "總計",
+                                        "text": "NTD",
                                         "size": "md",
-                                        "weight": "bold",
-                                        "align": "start"
+                                        "flex": 0
                                     },
                                     {
                                         "type": "text",
                                         "text": "110,000",
                                         "size": "md",
-                                        "color": "#111111",
+                                        "align": "end"
+                                    }
+                                    ]
+                                }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "總報酬率",
                                         "weight": "bold",
-                                        "align": "center"
+                                        "size": "lg",
+                                        "color": "#215c80",
+                                        "margin": "md"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "(-0.5%)",
-                                        "size": "sm",
+                                        "text": "+5%",
+                                        "size": "md",
                                         "color": "#eb0505",
-                                        "weight": "bold",
                                         "align": "end"
                                     }
                                 ]
