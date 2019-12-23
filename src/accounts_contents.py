@@ -49,45 +49,6 @@ accounts_contents = {
                         "spacing": "sm",
                         "contents": [
                             {
-                                "type": "text",
-                                "text": "總投入成本",
-                                "weight": "bold",
-                                "size": "lg",
-                                "color": "#215c80",
-                                "margin": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "spacing": "sm",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "TWD",
-                                        "size": "md",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "240,000",
-                                        "size": "md",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": [
-                            {
                                 "type": "box",
                                 "layout": "horizontal",
                                 "contents": [
@@ -100,9 +61,15 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "TWD 50,000",
+                                        "text": "NTD 50,000",
                                         "size": "sm",
                                         "color": "#111111",
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "0.5%",
+                                        "size": "sm",
+                                        "color": "#eb0505",
                                         "align": "end"
                                     }
                                 ]
@@ -120,7 +87,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "TWD 30,000",
+                                        "text": "NTD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -140,7 +107,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "TWD 30,000",
+                                        "text": "NTD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -160,7 +127,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "TWD 100,000",
+                                        "text": "NTD 100,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -180,7 +147,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "TWD 30,000",
+                                        "text": "NTD 30,000",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -188,7 +155,42 @@ accounts_contents = {
                                 ]
                             },
                         ]
-                    }    
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "總現值",
+                                "weight": "bold",
+                                "size": "lg",
+                                "color": "#215c80",
+                                "margin": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "NTD",
+                                        "size": "md",
+                                        "flex": 0
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "240,000",
+                                        "size": "md",
+                                        "align": "end"
+                                    }
+                                ]
+                            }
+                        ]
+                    },    
                 ]
             },
             "footer": {
