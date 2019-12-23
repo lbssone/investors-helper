@@ -17,13 +17,6 @@ accounts_contents = {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
-                    # {
-                    #     "type": "text",
-                    #     "text": "RECEIPT",
-                    #     "weight": "bold",
-                    #     "color": "#1DB446",
-                    #     "size": "sm"
-                    # },
                     {
                         "type": "text",
                         "text": "您的投資資產總覽",
@@ -47,178 +40,116 @@ accounts_contents = {
                         "layout": "vertical",
                         "margin": "xxl",
                         "spacing": "sm",
-                        "borderWidth": "normal",
-                        "borderColor": "#215c80",
-                        "cornerRadius": "md",
-                        "contents": [
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "   ",
-                                "size": "sm",
-                                "color": "#555555",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "現值(NTD)",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "報酬率",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "股票",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "50,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "基金",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "30,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "外匯",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "30,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "separator",
-                            "margin": "md"
-                        },
-                        {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
                         "contents": [
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "spacing": "sm",
-                                "margin": "xxl",
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "總現值",
-                                        "weight": "bold",
-                                        "size": "md",
-                                        "color": "#215c80",
-                                        "margin": "md"
+                                        "text": "   ",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "NTD 110,000",
-                                        "size": "md",
+                                        "text": "現值(NTD)",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "報酬率",
+                                        "size": "sm",
+                                        "color": "#111111",
                                         "align": "end"
                                     }
                                 ]
                             },
                             {
-                                "type": "separator",
-                                "margin": "xxl",
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "股票",
+                                        "size": "md",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "50,000",
+                                        "size": "md",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(+0.5%)",
+                                        "size": "sm",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
+                                ]
                             },
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "spacing": "sm",
-                                "margin": "xxl",
+                                "margin": "md",
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "總報酬率",
-                                        "weight": "bold",
+                                        "text": "基金",
                                         "size": "md",
-                                        "color": "#215c80",
-                                        "margin": "md"
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "+5%",
+                                        "text": "30,000",
                                         "size": "md",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(+0.5%)",
+                                        "size": "sm",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "外匯",
+                                        "size": "md",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "30,000",
+                                        "size": "md",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(+0.5%)",
+                                        "size": "sm",
                                         "color": "#eb0505",
                                         "align": "end"
                                     }
@@ -226,91 +157,113 @@ accounts_contents = {
                             },
                             {
                                 "type": "separator",
+                                "margin": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
                                 "margin": "xxl",
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
+                                "spacing": "sm",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "定存",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "NTD 100,000",
-                                    "size": "sm",
-                                    "color": "#111111",
-                                    "align": "end"
-                                }
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "spacing": "sm",
+                                        "margin": "xxl",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "總現值",
+                                                "weight": "bold",
+                                                "size": "md",
+                                                "color": "#215c80",
+                                                "margin": "md"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "NTD 110,000",
+                                                "size": "md",
+                                                "align": "end"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "separator",
+                                        "margin": "xxl",
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "spacing": "sm",
+                                        "margin": "xxl",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "總報酬率",
+                                                "weight": "bold",
+                                                "size": "md",
+                                                "color": "#215c80",
+                                                "margin": "md"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "+5%",
+                                                "size": "md",
+                                                "color": "#eb0505",
+                                                "align": "end"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "separator",
+                                        "margin": "xxl",
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "定存",
+                                                "size": "sm",
+                                                "color": "#555555",
+                                                "flex": 0
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "NTD 100,000",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "end"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "保險",
+                                                "size": "sm",
+                                                "color": "#555555",
+                                                "flex": 0
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "NTD 30,000",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "end"
+                                            }
+                                        ]
+                                    }
                                 ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "保險",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "flex": 0
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "NTD 30,000",
-                                    "size": "sm",
-                                    "color": "#111111",
-                                    "align": "end"
-                                }
-                            ]
-                        }
+                            }
                         ]
                     },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": "總現值",
-                            "weight": "bold",
-                            "size": "lg",
-                            "color": "#215c80",
-                            "margin": "md"
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "spacing": "sm",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "NTD",
-                                "size": "md",
-                                "flex": 0
-                            },
-                            {
-                                "type": "text",
-                                "text": "240,000",
-                                "size": "md",
-                                "align": "end"
-                            }
-                            ]
-                        }
-                        ]
-                    }
-                    ]
-                },
+                ]
+            },
             "footer": {
                 "type": "box",
                 "layout": "vertical",
