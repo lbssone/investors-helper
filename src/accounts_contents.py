@@ -371,61 +371,6 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "spacing": "sm",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "總現值",
-                                        "weight": "bold",
-                                        "size": "md",
-                                        "color": "#215c80",
-                                        "margin": "md"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "NTD 17,000",
-                                        "weight": "bold",
-                                        "size": "md",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl",
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "spacing": "sm",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "總報酬率",
-                                        "weight": "bold",
-                                        "size": "md",
-                                        "color": "#215c80",
-                                        "margin": "md"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "+5%",
-                                        "weight": "bold",
-                                        "size": "md",
-                                        "color": "#eb0505",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl",
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
                                 "margin": "xxl",
                                 "contents": [
                                     {
@@ -535,6 +480,61 @@ accounts_contents = {
                                     }
                                 ]
                             },
+                            {
+                                "type": "separator",
+                                "margin": "xxl",
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "margin": "xxl",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "總現值",
+                                        "weight": "bold",
+                                        "size": "md",
+                                        "color": "#215c80",
+                                        "margin": "md"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "NTD 17,000",
+                                        "weight": "bold",
+                                        "size": "md",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "separator",
+                                "margin": "xxl",
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "sm",
+                                "margin": "xxl",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "總報酬率",
+                                        "weight": "bold",
+                                        "size": "md",
+                                        "color": "#215c80",
+                                        "margin": "md"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "+5%",
+                                        "weight": "bold",
+                                        "size": "md",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ]
