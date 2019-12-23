@@ -862,14 +862,14 @@ accounts_contents = {
                                         {
                                             "type": "text",
                                             "text": "￥83,356(JPY)",
-                                            "size": "md",
+                                            "size": "xs",
                                             "color": "#111111",
                                             "align": "center"
                                         },
                                         {
                                             "type": "text",
                                             "text": "NTD 22,865",
-                                            "size": "md",
+                                            "size": "xs",
                                             "color": "#111111",
                                             "align": "center"
                                         },
