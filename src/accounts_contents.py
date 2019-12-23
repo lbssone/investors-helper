@@ -814,134 +814,135 @@ accounts_contents = {
                         "margin": "xxl",
                         "spacing": "sm",
                         "contents": [
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "contents": [
                             {
-                                "type": "text",
-                                "text": "   ",
-                                "size": "sm",
-                                "color": "#555555",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "持有總額",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "損益參考",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "日幣",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "   ",
+                                    "size": "sm",
+                                    "color": "#555555",
+                                    "align": "start"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "持有總額",
+                                    "size": "sm",
+                                    "color": "#111111",
+                                    "align": "center"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "損益參考",
+                                    "size": "sm",
+                                    "color": "#111111",
+                                    "align": "end"
+                                }
+                                ]
                             },
                             {
                                 "type": "box",
-                                "layout": "vertical",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "日幣",
+                                    "size": "md",
+                                    "color": "#555555",
+                                    "weight": "bold",
+                                    "align": "start"
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "margin": "md",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "￥83,356(JPY)",
+                                            "size": "md",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "NTD 22,865",
+                                            "size": "md",
+                                            "color": "#111111",
+                                            "align": "center"
+                                        },
+                                    ]
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "(+0.5%)",
+                                    "size": "sm",
+                                    "color": "#eb0505",
+                                    "align": "end"
+                                }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "基金",
+                                    "size": "md",
+                                    "color": "#555555",
+                                    "weight": "bold",
+                                    "align": "start"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "30,000",
+                                    "size": "md",
+                                    "color": "#111111",
+                                    "align": "center"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "(+0.5%)",
+                                    "size": "sm",
+                                    "color": "#eb0505",
+                                    "align": "end"
+                                }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
                                 "margin": "md",
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "￥83,356(JPY)",
+                                        "text": "外匯",
+                                        "size": "md",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "30,000",
                                         "size": "md",
                                         "color": "#111111",
                                         "align": "center"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "NTD 22,865",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
+                                        "text": "(+0.5%)",
+                                        "size": "sm",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
                                 ]
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
                             }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "基金",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "30,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
-                        {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "md",
-                            "contents": [
-                            {
-                                "type": "text",
-                                "text": "外匯",
-                                "size": "md",
-                                "color": "#555555",
-                                "weight": "bold",
-                                "align": "start"
-                            },
-                            {
-                                "type": "text",
-                                "text": "30,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "center"
-                            },
-                            {
-                                "type": "text",
-                                "text": "(+0.5%)",
-                                "size": "sm",
-                                "color": "#eb0505",
-                                "align": "end"
-                            }
-                            ]
-                        },
+                        ]
                     }
                 ]
             },
