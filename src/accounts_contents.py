@@ -843,44 +843,52 @@ accounts_contents = {
                             },
                             {
                                 "type": "box",
-                                "layout": "horizontal",
-                                "margin": "xl",
+                                "layout": "vertical",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "日幣",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "weight": "bold",
-                                    "align": "start"
-                                },
-                                {
-                                    "type": "box",
-                                    "layout": "vertical",
-                                    "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "margin": "md",
+                                        "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "日幣",
+                                            "size": "sm",
+                                            "color": "#555555",
+                                            "weight": "bold",
+                                            "align": "start"
+                                        },
+                        
                                         {
                                             "type": "text",
                                             "text": "￥83,356",
                                             "size": "sm",
                                             "color": "#111111",
+                                            "weight": "bold",
                                             "align": "center"
                                         },
                                         {
                                             "type": "text",
-                                            "text": "(NTD 22,865)",
-                                            "size": "xxs",
-                                            "color": "#111111",
-                                            "align": "center"
-                                        },
-                                    ]
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "(+0.5%)",
-                                    "size": "sm",
-                                    "color": "#eb0505",
-                                    "align": "end"
-                                }
+                                            "text": "(+0.5%)",
+                                            "size": "sm",
+                                            "color": "#eb0505",
+                                            "align": "end"
+                                        }
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "(NTD 22,865)",
+                                                "size": "xxs",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            }
+                                        ]
+                                    }
                                 ]
                             },
                             {
