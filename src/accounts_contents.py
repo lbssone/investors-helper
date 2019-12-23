@@ -61,15 +61,15 @@ accounts_contents = {
                             },
                             {
                                 "type": "text",
-                                "text": "(NTD)",
-                                "size": "sm",
+                                "text": "現值(NTD)",
+                                "size": "md",
                                 "color": "#111111",
                                 "align": "center"
                             },
                             {
                                 "type": "text",
                                 "text": "報酬率",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#111111",
                                 "align": "end"
                             }
@@ -82,21 +82,22 @@ accounts_contents = {
                             {
                                 "type": "text",
                                 "text": "股票",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#555555",
+                                "weight": "bold"
                                 "align": "start"
                             },
                             {
                                 "type": "text",
                                 "text": "50,000",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#111111",
                                 "align": "center"
                             },
                             {
                                 "type": "text",
                                 "text": "(+0.5%)",
-                                "size": "sm",
+                                "size": "md",
                                 "color": "#eb0505",
                                 "align": "end"
                             }
