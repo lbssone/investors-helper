@@ -29,6 +29,8 @@ handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
 user_set = set()
 foxconn = twstock.realtime.get('2317')
 foxconn_latest_price = float(foxconn['realtime']['latest_trade_price'])
+tsmc = twstock.realtime.get('2330')
+tsmc_latest_price = float(foxconn['realtime']['latest_trade_price'])
 
 @app.route('/')
 def index():
