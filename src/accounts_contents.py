@@ -848,7 +848,6 @@ accounts_contents = {
                                     {
                                         "type": "box",
                                         "layout": "horizontal",
-                                        "margin": "md",
                                         "contents": [
                                         {
                                             "type": "text",
