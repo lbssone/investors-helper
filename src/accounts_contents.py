@@ -335,9 +335,6 @@ accounts_contents = {
                         "layout": "vertical",
                         "margin": "xxl",
                         "spacing": "sm",
-                        "borderWidth": "normal",
-                        "borderColor": "#215c80",
-                        "cornerRadius": "md",
                         "contents": [
                             {
                                 "type": "box",

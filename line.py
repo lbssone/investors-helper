@@ -236,12 +236,7 @@ def push_price_notification():
                 URIAction(
                     label='前往app操作',
                     uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
-                ),
-                PostbackAction(
-                    label='更改通知價格',
-                    display_text='更改通知價格',
-                    data='更改通知價格'
-                ),
+                )
             ]
         )
     )
