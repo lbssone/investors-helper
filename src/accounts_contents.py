@@ -844,7 +844,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "margin": "md",
+                                "margin": "xl",
                                 "contents": [
                                 {
                                     "type": "text",
@@ -857,7 +857,6 @@ accounts_contents = {
                                 {
                                     "type": "box",
                                     "layout": "vertical",
-                                    "margin": "md",
                                     "contents": [
                                         {
                                             "type": "text",
@@ -887,7 +886,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "margin": "md",
+                                "margin": "xl",
                                 "contents": [
                                 {
                                     "type": "text",
@@ -900,7 +899,6 @@ accounts_contents = {
                                 {
                                     "type": "box",
                                     "layout": "vertical",
-                                    "margin": "md",
                                     "contents": [
                                         {
                                             "type": "text",
@@ -930,7 +928,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "margin": "md",
+                                "margin": "xl",
                                 "contents": [
                                 {
                                     "type": "text",
@@ -943,7 +941,6 @@ accounts_contents = {
                                 {
                                     "type": "box",
                                     "layout": "vertical",
-                                    "margin": "md",
                                     "contents": [
                                         {
                                             "type": "text",
