@@ -177,7 +177,6 @@ accounts_contents = {
                                 "type": "text",
                                 "text": "總計",
                                 "size": "md",
-                                "color": "#555555",
                                 "weight": "bold",
                                 "align": "start"
                             },
@@ -336,6 +335,9 @@ accounts_contents = {
                         "layout": "vertical",
                         "margin": "xxl",
                         "spacing": "sm",
+                        "borderWidth": "normal",
+                        "borderColor": "#215c80",
+                        "cornerRadius": "md",
                         "contents": [
                             {
                                 "type": "box",
@@ -343,14 +345,21 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Energy Drink",
+                                        "text": "   ",
                                         "size": "sm",
                                         "color": "#555555",
-                                        "flex": 0
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$2.99",
+                                        "text": "現值(NTD)",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "報酬率",
                                         "size": "sm",
                                         "color": "#111111",
                                         "align": "end"
@@ -360,19 +369,28 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
+                                "margin": "md",
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Chewing Gum",
-                                        "size": "sm",
+                                        "text": "鴻海",
+                                        "size": "md",
                                         "color": "#555555",
-                                        "flex": 0
+                                        "weight": "bold",
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$0.99",
-                                        "size": "sm",
+                                        "text": "9,932",
+                                        "size": "md",
                                         "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(-0.25%)",
+                                        "size": "sm",
+                                        "color": "#00b01b",
                                         "align": "end"
                                     }
                                 ]
@@ -380,46 +398,64 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
+                                "margin": "md",
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "Bottled Water",
-                                        "size": "sm",
+                                        "text": "台泥",
+                                        "size": "md",
                                         "color": "#555555",
-                                        "flex": 0
+                                        "weight": "bold",
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$3.33",
-                                        "size": "sm",
+                                        "text": "4,300",
+                                        "size": "md",
                                         "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(0.00%)",
+                                        "size": "sm",
+                                        "color": "##8f8f8f",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "元大台灣50",
+                                        "size": "md",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "4,300",
+                                        "size": "md",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "(-0.27%)",
+                                        "size": "sm",
+                                        "color": "#eb0505",
                                         "align": "end"
                                     }
                                 ]
                             },
                             {
                                 "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "margin": "xxl",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "ITEMS",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "3",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
+                                "margin": "md"
                             },
                             {
                                 "type": "box",
@@ -427,81 +463,28 @@ accounts_contents = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "TOTAL",
-                                        "size": "sm",
-                                        "color": "#555555"
+                                        "text": "總計",
+                                        "size": "md",
+                                        "weight": "bold",
+                                        "align": "start"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$7.31",
-                                        "size": "sm",
+                                        "text": "110,000",
+                                        "size": "md",
                                         "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CASH",
-                                        "size": "sm",
-                                        "color": "#555555"
+                                        "weight": "bold",
+                                        "align": "center"
                                     },
                                     {
                                         "type": "text",
-                                        "text": "$8.0",
+                                        "text": "(-0.5%)",
                                         "size": "sm",
-                                        "color": "#111111",
+                                        "color": "#eb0505",
+                                        "weight": "bold",
                                         "align": "end"
                                     }
                                 ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "CHANGE",
-                                        "size": "sm",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$0.69",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xxl"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "PAYMENT ID",
-                                "size": "xs",
-                                "color": "#aaaaaa",
-                                "flex": 0
-                            },
-                            {
-                                "type": "text",
-                                "text": "#743289384279",
-                                "color": "#aaaaaa",
-                                "size": "xs",
-                                "align": "end"
                             }
                         ]
                     }
