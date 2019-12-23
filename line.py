@@ -81,17 +81,12 @@ def handle_message(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-                text='【到價通知】\n台積電目前的股價為{}，已達設定價格'.format(latest_price),
+                text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(latest_price),
                 actions=[
                     URIAction(
-                        label='前往app調整',
+                        label='前往app操作',
                         uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
-                    ),
-                    PostbackAction(
-                        label='更改通知價格',
-                        display_text='更改通知價格',
-                        data='更改通知價格'
-                    ),
+                    )
                 ]
             )
         )
@@ -236,21 +231,17 @@ def push_price_notification():
     confirm_template_message = TemplateSendMessage(
         alt_text='Confirm template',
         template=ConfirmTemplate(
-            text='【到價通知】\n台積電目前的股價為{}，已達設定之買入價格'.format(tsmc_latest_price),
+            text='【到價通知】\n台積電目前的股價為{}，已達設定之賣出價格'.format(tsmc_latest_price),
             actions=[
                 URIAction(
-                    label='前往app調整',
+                    label='前往app操作',
                     uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=9%3A66&scaling=contain&fbclid=IwAR24RY2zh7adUKS52LmjkczxdlvapAwT8griY5l-JTrruhrGEDuX8ykEU-Y'
-                ),
-                PostbackAction(
-                    label='更改通知價格',
-                    display_text='更改通知價格',
-                    data='更改通知價格'
-                ),
+                )
             ]
         )
     )
-    line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
+    line_bot_api.broadcast(confirm_template_message)
+    # line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=confirm_template_message)
 
 def push_accounts_contents():
     flex_message = FlexSendMessage(
