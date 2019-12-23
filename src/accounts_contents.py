@@ -156,10 +156,6 @@ accounts_contents = {
                                 ]
                             },
                             {
-                                "type": "separator",
-                                "margin": "md"
-                            },
-                            {
                                 "type": "box",
                                 "layout": "vertical",
                                 "margin": "xxl",
@@ -186,10 +182,6 @@ accounts_contents = {
                                                 "align": "end"
                                             }
                                         ]
-                                    },
-                                    {
-                                        "type": "separator",
-                                        "margin": "xxl",
                                     },
                                     {
                                         "type": "box",
@@ -220,41 +212,72 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "box",
-                                        "layout": "horizontal",
+                                        "layout": "vertical",
+                                        "margin": "xxl",
                                         "contents": [
                                             {
-                                                "type": "text",
-                                                "text": "定存",
-                                                "size": "sm",
-                                                "color": "#555555",
-                                                "flex": 0
+                                                "type": "box",
+                                                "layout": "horizontal",
+                                                "margin": "md",
+                                                "contents": [
+                                                    {
+                                                        "type": "text",
+                                                        "text": "  ",
+                                                        "size": "md",
+                                                        "color": "#555555",
+                                                        "weight": "bold"
+                                                        "flex": 0
+                                                    },
+                                                    {
+                                                        "type": "text",
+                                                        "text": "投入成本",
+                                                        "size": "md",
+                                                        "align": "end"
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "type": "text",
-                                                "text": "NTD 100,000",
-                                                "size": "sm",
-                                                "color": "#111111",
-                                                "align": "end"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "type": "box",
-                                        "layout": "horizontal",
-                                        "contents": [
-                                            {
-                                                "type": "text",
-                                                "text": "保險",
-                                                "size": "sm",
-                                                "color": "#555555",
-                                                "flex": 0
+                                                "type": "box",
+                                                "layout": "horizontal",
+                                                "margin": "md",
+                                                "contents": [
+                                                    {
+                                                        "type": "text",
+                                                        "text": "定存",
+                                                        "size": "md",
+                                                        "color": "#555555",
+                                                        "weight": "bold"
+                                                        "flex": 0
+                                                    },
+                                                    {
+                                                        "type": "text",
+                                                        "text": "NTD 100,000",
+                                                        "size": "md",
+                                                        "color": "#111111",
+                                                        "align": "end"
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "type": "text",
-                                                "text": "NTD 30,000",
-                                                "size": "sm",
-                                                "color": "#111111",
-                                                "align": "end"
+                                                "type": "box",
+                                                "layout": "horizontal",
+                                                "contents": [
+                                                    {
+                                                        "type": "text",
+                                                        "text": "保險",
+                                                        "size": "md",
+                                                        "color": "#555555",
+                                                        "weight": "bold",
+                                                        "flex": 0
+                                                    },
+                                                    {
+                                                        "type": "text",
+                                                        "text": "NTD 30,000",
+                                                        "size": "md",
+                                                        "color": "#111111",
+                                                        "align": "end"
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
