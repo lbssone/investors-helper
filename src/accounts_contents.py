@@ -844,6 +844,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "vertical",
+                                "margin": "xl",
                                 "contents": [
                                     {
                                         "type": "box",
@@ -868,7 +869,7 @@ accounts_contents = {
                                         },
                                         {
                                             "type": "text",
-                                            "text": "(+0.5%)",
+                                            "text": "+1.63%",
                                             "size": "sm",
                                             "color": "#eb0505",
                                             "align": "end"
@@ -892,86 +893,101 @@ accounts_contents = {
                             },
                             {
                                 "type": "box",
-                                "layout": "horizontal",
+                                "layout": "vertical",
                                 "margin": "xl",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "美金",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "weight": "bold",
-                                    "align": "start"
-                                },
-                                {
-                                    "type": "box",
-                                    "layout": "vertical",
-                                    "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "美金",
+                                            "size": "md",
+                                            "color": "#555555",
+                                            "weight": "bold",
+                                            "align": "start"
+                                        },
+                        
                                         {
                                             "type": "text",
                                             "text": "$144",
-                                            "size": "sm",
+                                            "size": "md",
                                             "color": "#111111",
+                                            "weight": "bold",
                                             "align": "center"
                                         },
                                         {
                                             "type": "text",
-                                            "text": "(NTD 4,339)",
-                                            "size": "xxs",
-                                            "color": "#111111",
-                                            "align": "center"
-                                        },
-                                    ]
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "(+1.99%)",
-                                    "size": "sm",
-                                    "color": "#eb0505",
-                                    "align": "end"
-                                }
+                                            "text": "+1.99%",
+                                            "size": "sm",
+                                            "color": "#eb0505",
+                                            "align": "end"
+                                        }
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "(NTD 4,339)",
+                                                "size": "xxs",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            }
+                                        ]
+                                    }
                                 ]
                             },
                             {
                                 "type": "box",
-                                "layout": "horizontal",
+                                "layout": "vertical",
                                 "margin": "xl",
                                 "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "歐元",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "weight": "bold",
-                                    "align": "start"
-                                },
-                                {
-                                    "type": "box",
-                                    "layout": "vertical",
-                                    "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "歐元",
+                                            "size": "md",
+                                            "color": "#555555",
+                                            "weight": "bold",
+                                            "align": "start"
+                                        },
                                         {
                                             "type": "text",
                                             "text": "€344",
-                                            "size": "sm",
+                                            "size": "md",
                                             "color": "#111111",
+                                            "weight": "bold",
                                             "align": "center"
                                         },
                                         {
                                             "type": "text",
-                                            "text": "(NTD 11,472)",
-                                            "size": "xxs",
-                                            "color": "#111111",
-                                            "align": "center"
-                                        },
-                                    ]
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "(-1.03%)",
-                                    "size": "sm",
-                                    "color": "#eb0505",
-                                    "align": "end"
-                                }
+                                            "text": "-1.03%",
+                                            "size": "sm",
+                                            "color": "#00b01b",
+                                            "align": "end"
+                                        }
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "(NTD 11,472)",
+                                                "size": "xxs",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            }
+                                        ]
+                                    }
                                 ]
                             },
                         ]
