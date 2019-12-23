@@ -84,7 +84,7 @@ accounts_contents = {
                                 "text": "股票",
                                 "size": "md",
                                 "color": "#555555",
-                                "weight": "bold"
+                                "weight": "bold",
                                 "align": "start"
                             },
                             {
