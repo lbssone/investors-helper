@@ -265,8 +265,8 @@ def push_notification():
     # while True:
     #     schedule.run_pending()
     #     time.sleep(10)
-    if tsmc_latest_price < 330:
-        push_price_notification()
+    # if tsmc_latest_price < 330:
+    push_price_notification()
 
 push_notification()
 
