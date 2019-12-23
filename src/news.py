@@ -14,18 +14,6 @@ stock_messages = [
                 "gravity": "center"
             },
             {
-                "type": "image",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip15.png",
-                "position": "absolute",
-                "aspectMode": "fit",
-                "aspectRatio": "1:1",
-                "offsetTop": "0px",
-                "offsetBottom": "0px",
-                "offsetStart": "0px",
-                "offsetEnd": "0px",
-                "size": "full"
-            },
-            {
                 "type": "box",
                 "layout": "horizontal",
                 "contents": [
