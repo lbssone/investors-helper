@@ -594,27 +594,7 @@ accounts_contents = {
                             {
                                 "type": "box",
                                 "layout": "horizontal",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "  ",
-                                        "size": "md",
-                                        "weight": "bold",
-                                        "color": "#215c80",
-                                        "align": "start"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "現值(NTD)",
-                                        "size": "sm",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "margin": "md",
+                                "margin": "lg",
                                 "contents": [
                                     {
                                         "type": "text",
@@ -627,7 +607,7 @@ accounts_contents = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "    ",
+                                        "text": "現值(NTD)",
                                         "size": "sm",
                                         "color": "#00b01b",
                                         "align": "end"
