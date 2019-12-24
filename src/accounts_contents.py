@@ -827,7 +827,7 @@ accounts_contents = {
                                 ]
                             },
                         ]
-                    }
+                    },
                     # 參考損益
                     {
                         "type": "box",
