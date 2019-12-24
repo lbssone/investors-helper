@@ -640,9 +640,9 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(-0.25%)",
+                                                "text": "(+0.25%)",
                                                 "size": "xs",
-                                                "color": "#00b01b",
+                                                "color": "#eb0505",
                                                 "align": "end"
                                             }
                                         ]
@@ -676,9 +676,9 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(0.00%)",
+                                                "text": "(0.68%)",
                                                 "size": "xs",
-                                                "color": "#8f8f8f",
+                                                "color": "#eb0505",
                                                 "align": "end"
                                             }
                                         ]
@@ -734,9 +734,9 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(0.00%)",
+                                                "text": "(2.88%)",
                                                 "size": "xs",
-                                                "color": "#8f8f8f",
+                                                "color": "#eb0505",
                                                 "align": "end"
                                             }
                                         ]
@@ -792,7 +792,7 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(0.00%)",
+                                                "text": "(+1.95%)",
                                                 "size": "xs",
                                                 "color": "#8f8f8f",
                                                 "align": "end"
