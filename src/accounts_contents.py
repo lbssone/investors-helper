@@ -635,13 +635,6 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "    ",
                                         "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "    ",
-                                        "size": "sm",
                                         "color": "#00b01b",
                                         "align": "end"
                                     }
@@ -662,19 +655,25 @@ accounts_contents = {
                                         "wrap": True
                                     },
                                     {
-                                        "type": "text",
-                                        "text": "4,000",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "4,000",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "(-0.25%)",
+                                                "size": "xs",
+                                                "color": "#00b01b",
+                                                "align": "end"
+                                            }
+                                        ]
                                     },
-                                    {
-                                        "type": "text",
-                                        "text": "-0.25%",
-                                        "size": "sm",
-                                        "color": "#00b01b",
-                                        "align": "end"
-                                    }
                                 ]
                             },
                             {
@@ -692,18 +691,24 @@ accounts_contents = {
                                         "wrap": True
                                     },
                                     {
-                                        "type": "text",
-                                        "text": "3,021",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "0.00%",
-                                        "size": "sm",
-                                        "color": "#8f8f8f",
-                                        "align": "end"
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "3,021",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "(0.00%)",
+                                                "size": "xs",
+                                                "color": "#8f8f8f",
+                                                "align": "end"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -719,13 +724,6 @@ accounts_contents = {
                                         "color": "#215c80",
                                         "weight": "bold",
                                         "align": "start"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "   ",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
                                     },
                                     {
                                         "type": "text",
@@ -751,18 +749,24 @@ accounts_contents = {
                                         "wrap": True
                                     },
                                     {
-                                        "type": "text",
-                                        "text": "3,085",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "0.00%",
-                                        "size": "sm",
-                                        "color": "#8f8f8f",
-                                        "align": "end"
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "3,085",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "(0.00%)",
+                                                "size": "xs",
+                                                "color": "#8f8f8f",
+                                                "align": "end"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -778,13 +782,6 @@ accounts_contents = {
                                         "color": "#215c80",
                                         "weight": "bold",
                                         "align": "start"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "   ",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
                                     },
                                     {
                                         "type": "text",
@@ -810,22 +807,32 @@ accounts_contents = {
                                         "wrap": True
                                     },
                                     {
-                                        "type": "text",
-                                        "text": "2,894",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "0.00%",
-                                        "size": "sm",
-                                        "color": "#8f8f8f",
-                                        "align": "end"
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": "2,894",
+                                                "size": "sm",
+                                                "color": "#111111",
+                                                "align": "center"
+                                            },
+                                            {
+                                                "type": "text",
+                                                "text": "(0.00%)",
+                                                "size": "xs",
+                                                "color": "#8f8f8f",
+                                                "align": "end"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                         ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "xxl"
                     },
                     # 參考損益
                     {
@@ -926,10 +933,6 @@ accounts_contents = {
                     #         }
                     #     ]
                     # },
-                    {
-                        "type": "separator",
-                        "margin": "xl"
-                    },
                     # 帳面市值
                     {
                         "type": "box",
@@ -971,42 +974,42 @@ accounts_contents = {
                         "margin": "xl"
                     },
                     # 累積總配息
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "paddingBottom": "xl",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "累積總配息",
-                                "weight": "bold",
-                                "size": "md",
-                                "color": "#215c80",
-                                "margin": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "spacing": "sm",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "NTD",
-                                        "size": "sm",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "36",
-                                        "size": "sm",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
+                    # {
+                    #     "type": "box",
+                    #     "layout": "vertical",
+                    #     "margin": "xxl",
+                    #     "spacing": "sm",
+                    #     "paddingBottom": "xl",
+                    #     "contents": [
+                    #         {
+                    #             "type": "text",
+                    #             "text": "累積總配息",
+                    #             "weight": "bold",
+                    #             "size": "md",
+                    #             "color": "#215c80",
+                    #             "margin": "md"
+                    #         },
+                    #         {
+                    #             "type": "box",
+                    #             "layout": "horizontal",
+                    #             "spacing": "sm",
+                    #             "contents": [
+                    #                 {
+                    #                     "type": "text",
+                    #                     "text": "NTD",
+                    #                     "size": "sm",
+                    #                     "flex": 0
+                    #                 },
+                    #                 {
+                    #                     "type": "text",
+                    #                     "text": "36",
+                    #                     "size": "sm",
+                    #                     "align": "end"
+                    #                 }
+                    #             ]
+                    #         }
+                    #     ]
+                    # },
                 ]
             },
             "footer": {
