@@ -676,7 +676,7 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(0.68%)",
+                                                "text": "(+0.68%)",
                                                 "size": "xs",
                                                 "color": "#eb0505",
                                                 "align": "end"
@@ -734,7 +734,7 @@ accounts_contents = {
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "(2.88%)",
+                                                "text": "(+2.88%)",
                                                 "size": "xs",
                                                 "color": "#eb0505",
                                                 "align": "end"
@@ -1082,7 +1082,7 @@ accounts_contents = {
                         
                                         {
                                             "type": "text",
-                                            "text": "￥83,356",
+                                            "text": "￥5,372",
                                             "size": "md",
                                             "color": "#111111",
                                             "weight": "bold",
@@ -1103,7 +1103,7 @@ accounts_contents = {
                                         "contents": [
                                             {
                                                 "type": "text",
-                                                "text": "(NTD 22,865)",
+                                                "text": "(NTD 1,500)",
                                                 "size": "xxs",
                                                 "color": "#111111",
                                                 "align": "center"
@@ -1132,7 +1132,7 @@ accounts_contents = {
                         
                                         {
                                             "type": "text",
-                                            "text": "$144",
+                                            "text": "$99",
                                             "size": "md",
                                             "color": "#111111",
                                             "weight": "bold",
@@ -1153,7 +1153,7 @@ accounts_contents = {
                                         "contents": [
                                             {
                                                 "type": "text",
-                                                "text": "(NTD 4,339)",
+                                                "text": "(NTD 3,000)",
                                                 "size": "xxs",
                                                 "color": "#111111",
                                                 "align": "center"
@@ -1181,7 +1181,7 @@ accounts_contents = {
                                         },
                                         {
                                             "type": "text",
-                                            "text": "€344",
+                                            "text": "€30",
                                             "size": "md",
                                             "color": "#111111",
                                             "weight": "bold",
@@ -1202,7 +1202,7 @@ accounts_contents = {
                                         "contents": [
                                             {
                                                 "type": "text",
-                                                "text": "(NTD 11,472)",
+                                                "text": "(NTD 1,000)",
                                                 "size": "xxs",
                                                 "color": "#111111",
                                                 "align": "center"
