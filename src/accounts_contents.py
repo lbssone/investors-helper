@@ -794,7 +794,7 @@ accounts_contents = {
                                                 "type": "text",
                                                 "text": "(+1.95%)",
                                                 "size": "xs",
-                                                "color": "#8f8f8f",
+                                                "color": "#eb0505",
                                                 "align": "end"
                                             }
                                         ]
