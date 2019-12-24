@@ -588,7 +588,7 @@ accounts_contents = {
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "xxl",
+                        "margin": "lg",
                         "spacing": "sm",
                         "contents": [
                             {
@@ -609,7 +609,6 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "現值(NTD)",
                                         "size": "sm",
-                                        "color": "#00b01b",
                                         "align": "end"
                                     }
                                 ]
@@ -806,13 +805,13 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "xl"
                     },
                     # 參考損益
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "xxl",
+                        "margin": "xl",
                         "spacing": "sm",
                         "contents": [
                             {
@@ -869,7 +868,7 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xxl"
+                        "margin": "xl"
                     },
                     # 投入成本
                     # {
@@ -911,7 +910,7 @@ accounts_contents = {
                     {
                         "type": "box",
                         "layout": "vertical",
-                        "margin": "xxl",
+                        "margin": "xl",
                         "spacing": "sm",
                         "contents": [
                             {
