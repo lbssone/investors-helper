@@ -585,6 +585,249 @@ accounts_contents = {
                         "type": "separator",
                         "margin": "md"
                     },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "xxl",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "  ",
+                                        "size": "md",
+                                        "weight": "bold",
+                                        "color": "#215c80",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "現值(NTD)",
+                                        "size": "sm",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "報酬率",
+                                        "size": "sm",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "基富通",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start",
+                                        "wrap": True
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "    ",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "    ",
+                                        "size": "sm",
+                                        "color": "#00b01b",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "聯博美國收益基金A2(美元)",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start",
+                                        "wrap": True
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "4,000",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "-0.25%",
+                                        "size": "sm",
+                                        "color": "#00b01b",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "聯博全球高收益債券基金A2(美元)",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "3,021",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "0.00%",
+                                        "size": "sm",
+                                        "color": "#8f8f8f",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "xl",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "元大",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "   ",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "    ",
+                                        "size": "sm",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "元大新中國基金(人民幣)",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "3,085",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "0.00%",
+                                        "size": "sm",
+                                        "color": "#8f8f8f",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "separator",
+                                "margin": "xxl",
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "xl",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "台新",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "   ",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "    ",
+                                        "size": "sm",
+                                        "color": "#eb0505",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "台新中國通基金(新台幣)",
+                                        "size": "sm",
+                                        "color": "#555555",
+                                        "weight": "bold",
+                                        "align": "start"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "2,894",
+                                        "size": "sm",
+                                        "color": "#111111",
+                                        "align": "center"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "0.00%",
+                                        "size": "sm",
+                                        "color": "#8f8f8f",
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                        ]
+                    }
                     # 參考損益
                     {
                         "type": "box",
