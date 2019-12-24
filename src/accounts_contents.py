@@ -626,7 +626,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "基富通",
                                         "size": "sm",
-                                        "color": "#555555",
+                                        "color": "#215c80",
                                         "weight": "bold",
                                         "align": "start",
                                         "wrap": True
@@ -688,7 +688,8 @@ accounts_contents = {
                                         "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
-                                        "align": "start"
+                                        "align": "start",
+                                        "wrap": True
                                     },
                                     {
                                         "type": "text",
@@ -715,7 +716,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "元大",
                                         "size": "sm",
-                                        "color": "#555555",
+                                        "color": "#215c80",
                                         "weight": "bold",
                                         "align": "start"
                                     },
@@ -746,7 +747,8 @@ accounts_contents = {
                                         "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
-                                        "align": "start"
+                                        "align": "start",
+                                        "wrap": True
                                     },
                                     {
                                         "type": "text",
@@ -765,10 +767,6 @@ accounts_contents = {
                                 ]
                             },
                             {
-                                "type": "separator",
-                                "margin": "xxl",
-                            },
-                            {
                                 "type": "box",
                                 "layout": "horizontal",
                                 "margin": "xl",
@@ -777,7 +775,7 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "台新",
                                         "size": "sm",
-                                        "color": "#555555",
+                                        "color": "#215c80",
                                         "weight": "bold",
                                         "align": "start"
                                     },
@@ -808,7 +806,8 @@ accounts_contents = {
                                         "size": "sm",
                                         "color": "#555555",
                                         "weight": "bold",
-                                        "align": "start"
+                                        "align": "start",
+                                        "wrap": True
                                     },
                                     {
                                         "type": "text",
@@ -889,44 +888,44 @@ accounts_contents = {
                     },
                     {
                         "type": "separator",
-                        "margin": "xl"
+                        "margin": "xxl"
                     },
                     # 投入成本
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "投入成本",
-                                "weight": "bold",
-                                "size": "md",
-                                "color": "#215c80",
-                                "margin": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "spacing": "sm",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "NTD",
-                                        "size": "sm",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "12,938",
-                                        "size": "sm",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
+                    # {
+                    #     "type": "box",
+                    #     "layout": "vertical",
+                    #     "margin": "xxl",
+                    #     "spacing": "sm",
+                    #     "contents": [
+                    #         {
+                    #             "type": "text",
+                    #             "text": "投入成本",
+                    #             "weight": "bold",
+                    #             "size": "md",
+                    #             "color": "#215c80",
+                    #             "margin": "md"
+                    #         },
+                    #         {
+                    #             "type": "box",
+                    #             "layout": "horizontal",
+                    #             "spacing": "sm",
+                    #             "contents": [
+                    #                 {
+                    #                     "type": "text",
+                    #                     "text": "NTD",
+                    #                     "size": "sm",
+                    #                     "flex": 0
+                    #                 },
+                    #                 {
+                    #                     "type": "text",
+                    #                     "text": "12,938",
+                    #                     "size": "sm",
+                    #                     "align": "end"
+                    #                 }
+                    #             ]
+                    #         }
+                    #     ]
+                    # },
                     {
                         "type": "separator",
                         "margin": "xl"
