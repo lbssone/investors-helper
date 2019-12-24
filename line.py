@@ -248,7 +248,7 @@ def push_price_notification():
     )
     # line_bot_api.broadcast(confirm_template_message)
     line_bot_api.push_message(to='U86847ce3e861fa7b94de62652217c96d', messages=[Buttons_template_message, buttons_template_message])
-    line_bot_api.push_message(to='U79b484407dc572486489c9715d37ef44', messages=[Buttons_template_message, buttons_template_message])
+    # line_bot_api.push_message(to='U79b484407dc572486489c9715d37ef44', messages=[Buttons_template_message, buttons_template_message])
 
 def push_accounts_contents():
     flex_message = FlexSendMessage(

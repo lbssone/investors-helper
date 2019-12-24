@@ -915,7 +915,7 @@ accounts_contents = {
                         "contents": [
                             {
                                 "type": "text",
-                                "text": "帳面市值",
+                                "text": "參考市值",
                                 "weight": "bold",
                                 "size": "md",
                                 "color": "#215c80",
@@ -930,12 +930,14 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "NTD",
                                         "size": "sm",
+                                        "weight": "bold",
                                         "flex": 0
                                     },
                                     {
                                         "type": "text",
                                         "text": "13,000",
                                         "size": "sm",
+                                        "weight": "bold",
                                         "align": "end"
                                     }
                                 ]
