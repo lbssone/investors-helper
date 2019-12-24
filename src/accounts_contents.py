@@ -607,12 +607,6 @@ accounts_contents = {
                                         "type": "text",
                                         "text": "現值(NTD)",
                                         "size": "sm",
-                                        "align": "center"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "報酬率",
-                                        "size": "sm",
                                         "align": "end"
                                     }
                                 ]
@@ -663,7 +657,7 @@ accounts_contents = {
                                                 "text": "4,000",
                                                 "size": "sm",
                                                 "color": "#111111",
-                                                "align": "center"
+                                                "align": "end"
                                             },
                                             {
                                                 "type": "text",
@@ -699,7 +693,7 @@ accounts_contents = {
                                                 "text": "3,021",
                                                 "size": "sm",
                                                 "color": "#111111",
-                                                "align": "center"
+                                                "align": "end"
                                             },
                                             {
                                                 "type": "text",
@@ -757,7 +751,7 @@ accounts_contents = {
                                                 "text": "3,085",
                                                 "size": "sm",
                                                 "color": "#111111",
-                                                "align": "center"
+                                                "align": "end"
                                             },
                                             {
                                                 "type": "text",
@@ -815,7 +809,7 @@ accounts_contents = {
                                                 "text": "2,894",
                                                 "size": "sm",
                                                 "color": "#111111",
-                                                "align": "center"
+                                                "align": "end"
                                             },
                                             {
                                                 "type": "text",
@@ -968,10 +962,6 @@ accounts_contents = {
                                 ]
                             }
                         ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xl"
                     },
                     # 累積總配息
                     # {
