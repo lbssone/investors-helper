@@ -12,7 +12,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
-from src.news import stock_messages, fe_messages
+from src.news import stock_messages, fund_messages, fe_messages
 
 import twstock
 import schedule
@@ -257,6 +257,16 @@ def handle_postback(event):
                     )
                 )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
+        elif postback[5:] == '外匯':
+            fund_info_message = []
+            for i in range(4):
+                fund_info_message.append(
+                    FlexSendMessage(
+                        alt_text='hello',
+                        contents=fund_messages[i]
+                    )
+                )
+            line_bot_api.reply_message(event.reply_token, fund_info_message)
         elif postback[5:] == '外匯':
             fe_info_message = []
             for i in range(4):
