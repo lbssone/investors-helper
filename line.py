@@ -183,6 +183,7 @@ def handle_postback(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='設定',
             template=ButtonsTemplate(
+                text='請選擇'
                 actions=[
                     URIAction(
                         label='前往app設定',
