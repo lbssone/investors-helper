@@ -179,41 +179,58 @@ def handle_message(event):
 def handle_postback(event):
     postback = event.postback.data
     print('postback: '+postback)
-    if postback == '到價通知':
-        investment_info_message = TextSendMessage(
-            text='請選擇欲設定之項目',
-            quick_reply=QuickReply(
-                items=[
-                    QuickReplyButton(
-                        action=PostbackAction(
-                            label="股票", 
-                            text="股票", 
-                            data="到價通知:股票"
-                        ), 
-                        image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'
+    if postback == '到價通知' or postback == '資產變動提醒' or postback == '到期日通知':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='設定',
+            template=ButtonsTemplate(
+                actions=[
+                    URIAction(
+                        label='前往app設定',
+                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=1%3A412&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo'
                     ),
-                    QuickReplyButton(
-                        action=PostbackAction(
-                            label="基金", 
-                            text="基金",
-                            data="到價通知:基金"
-
-                        ), 
-                        image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'
-                    ),
-                    QuickReplyButton(
-                        action=PostbackAction(
-                            label="外匯", 
-                            text="外匯",
-                            data="到價通知:外匯"
-
-                        ),
-                        image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png'
+                    MessageAction(
+                        label='取消',
+                        text='取消'
                     )
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, investment_info_message)
+
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        # investment_info_message = TextSendMessage(
+        #     text='請選擇欲設定之項目',
+        #     quick_reply=QuickReply(
+        #         items=[
+        #             QuickReplyButton(
+        #                 action=PostbackAction(
+        #                     label="股票", 
+        #                     text="股票", 
+        #                     data="到價通知:股票"
+        #                 ), 
+        #                 image_url='https://cdn3.iconfinder.com/data/icons/science-soft/512/report_arrow_chart_business_graph_stock_data-512.png'
+        #             ),
+        #             QuickReplyButton(
+        #                 action=PostbackAction(
+        #                     label="基金", 
+        #                     text="基金",
+        #                     data="到價通知:基金"
+
+        #                 ), 
+        #                 image_url='https://image.flaticon.com/icons/png/512/1351/1351514.png'
+        #             ),
+        #             QuickReplyButton(
+        #                 action=PostbackAction(
+        #                     label="外匯", 
+        #                     text="外匯",
+        #                     data="到價通知:外匯"
+
+        #                 ),
+        #                 image_url='https://cdn4.iconfinder.com/data/icons/business-and-office-3-2/65/108-512.png'
+        #             )
+        #         ]
+        #     )
+        # )
+        # line_bot_api.reply_message(event.reply_token, investment_info_message)
     elif postback == '基金到價測試':
         buttons_template_message = TemplateSendMessage(
             alt_text='Confirm template',
