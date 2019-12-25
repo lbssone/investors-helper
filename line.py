@@ -247,7 +247,7 @@ def handle_postback(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif postback[:4] == '投資資訊':
-        if postback[5:] == '股票' or postback[5:] == '基金':
+        if postback[5:] == '股票':
             stock_info_message = []
             for i in range(4):
                 stock_info_message.append(
@@ -257,7 +257,7 @@ def handle_postback(event):
                     )
                 )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
-        elif postback[5:] == '外匯':
+        elif postback[5:] == '基金':
             fund_info_message = []
             for i in range(4):
                 fund_info_message.append(
