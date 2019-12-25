@@ -150,6 +150,11 @@ def handle_message(event):
                 text='請選擇欲設定項目',
                 actions=[
                     PostbackTemplateAction(
+                        label='基金到價測試',
+                        text='基金到價測試',
+                        data='基金到價測試'
+                    ),
+                    PostbackTemplateAction(
                         label='資產變動提醒',
                         text='資產變動提醒',
                         data='資產變動提醒'
@@ -160,15 +165,10 @@ def handle_message(event):
                         data='到價通知'
                     ),
                     PostbackTemplateAction(
-                        label='基金到價測試',
-                        text='基金到價測試',
-                        data='基金到價測試'
-                    ),
-                    PostbackTemplateAction(
                         label='到期日通知',
                         text='到期日通知',
                         data='到期日通知'
-                    ),
+                    )
                 ]
             )
         )
@@ -229,7 +229,7 @@ def handle_postback(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif postback[:4] == '投資資訊':
-        if postback[5:] == '股票':
+        if postback[5:] == '股票' or postback[5:] == '基金' or postback[5:] == '外匯':
             stock_info_message = []
             for i in range(4):
                 stock_info_message.append(
