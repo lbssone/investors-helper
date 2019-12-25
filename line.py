@@ -12,7 +12,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
-from src.news import stock_messages
+from src.news import stock_messages, fe_messages
 
 import twstock
 import schedule
@@ -229,7 +229,7 @@ def handle_postback(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif postback[:4] == '投資資訊':
-        if postback[5:] == '股票' or postback[5:] == '基金' or postback[5:] == '外匯':
+        if postback[5:] == '股票' or postback[5:] == '基金':
             stock_info_message = []
             for i in range(4):
                 stock_info_message.append(
@@ -239,6 +239,16 @@ def handle_postback(event):
                     )
                 )
             line_bot_api.reply_message(event.reply_token, stock_info_message)
+        elif postback[5:] == '外匯':
+            fe_info_message = []
+            for i in range(4):
+                fe_info_message.append(
+                    FlexSendMessage(
+                        alt_text='hello',
+                        contents=fe_messages[i]
+                    )
+                )
+            line_bot_api.reply_message(event.reply_token, fe_info_message)
 
 def push_price_notification():
     Buttons_template_message = TemplateSendMessage(
