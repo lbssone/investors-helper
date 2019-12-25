@@ -96,7 +96,7 @@ def handle_message(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ButtonsTemplate(
-                text='【到價通知】\n安聯收益成長基金-AM穩定月收類股(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
+                text='【到價通知】\n聯博美國收益基金A2(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
                 actions=[
                     URIAction(
                         label='前往app操作',
@@ -163,7 +163,11 @@ def handle_message(event):
                         label='到期日通知',
                         text='到期日通知',
                         data='到期日通知'
-                    )
+                    )PostbackTemplateAction(
+                        label='基金到價測試',
+                        text='基金到價測試',
+                        data='基金到價測試'
+                    ),
                 ]
             )
         )
@@ -209,6 +213,20 @@ def handle_postback(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, investment_info_message)
+    elif postback == '基金到價測試':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ButtonsTemplate(
+                text='【到價通知】\n聯博美國收益基金A2(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
+                actions=[
+                    URIAction(
+                        label='前往app操作',
+                        uri='https://www.figma.com/proto/jXjP5VcbA4zUflkzxUAf2Q/Wealth-Tracker?node-id=206%3A240&scaling=contain&fbclid=IwAR2Ei6t1lb639XrxtKQ_Xp8_vjOjSaWJAhzV_OJtPQ5DzzQ_Ki21GWwPGXo'
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif postback[:4] == '投資資訊':
         if postback[5:] == '股票':
             stock_info_message = []
@@ -237,7 +255,7 @@ def push_price_notification():
     buttons_template_message = TemplateSendMessage(
         alt_text='Confirm template',
         template=ButtonsTemplate(
-            text='【到價通知】\n安聯收益成長基金-AM穩定月收類股(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
+            text='【到價通知】\n聯博美國收益基金A2(美元) 最新淨值為{}，已達設定之贖回價格'.format(8.8100),
             actions=[
                 URIAction(
                     label='前往app操作',
