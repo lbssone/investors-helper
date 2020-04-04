@@ -13,6 +13,7 @@ from linebot.models import *
 
 from src.accounts_contents import accounts_contents  
 from src.news import stock_messages, fund_messages, fe_messages
+from config import config
 
 import twstock
 import schedule
@@ -23,8 +24,11 @@ import schedule
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('Dl2P8zbyzLT/ArjCFpS1EjEQQrEXEJqPhI2Qn8Q8mmKGwZNPS5pnDVZwwMPOzasdfsNPiGxCymwoNeQSTtx4HooAlKzvMftmHiUEUkbXAb3v1nYSjMGROkM3kNJqmtNA1nqAY5NgjVcXyiZJxUN2cAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('d7eb5d59a2c829f6b7bfac6c3dda309b')
+channel_access_token = config.CHANNEL_ACCESS_TOKEN
+channel_secret = config.CHANNEL_SECRET
+
+line_bot_api = LineBotApi(channel_access_token)
+handler = WebhookHandler(channel_secret)
 
 user_set = set()
 foxconn = twstock.realtime.get('2317')
