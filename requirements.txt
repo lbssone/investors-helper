@@ -2,7 +2,7 @@
 # https://github.com/damnever/pigar
 
 # line.py: 4
-Flask == 1.0.3
+Flask == 2.3.2
 
 # line.py: 9,12
 line_bot_sdk == 1.9.0
